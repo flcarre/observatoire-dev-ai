@@ -25,7 +25,6 @@ export function createObservatoryUseCases({
       return {
         navItems: allDossiers.map((dossier) => ({
           slug: dossier.slug,
-          number: dossier.number,
           title: dossier.title,
           hook: dossier.hook,
         })),
