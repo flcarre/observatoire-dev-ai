@@ -11,7 +11,8 @@ The maintainer still expects a reviewed PR, not a raw dump of generated content.
 
 - A high-signal article, report, paper, product engineering post or case study.
 - A public watch list, GitHub repo, README or JSON file containing many links.
-- Better categorization, summaries, source metadata or editorial framing.
+- Better categorization, article summaries, source metadata or editorial
+  framing.
 - Corrections to outdated resources.
 
 Avoid:
@@ -70,6 +71,10 @@ Rules:
 - Keep older sources only when they describe a durable concept.
 - Reject beginner tutorials and framework-first content.
 - Write all final summaries in French.
+- Keep `synthesis` as a short "what this is about" framing.
+- For each article/watch resource, add `articleSummary`: a richer explanation
+  of the important information, roughly ten lines when useful, without treating
+  the line count as a fixed constraint.
 - Do not copy long excerpts from sources.
 - Preserve source traceability.
 - Fill `author` with the canonical person, company, lab or organization behind
@@ -83,7 +88,9 @@ Implementation:
 3. Create a new category only if no existing category fits and the category is
    framework-agnostic and durable.
 4. For every resource, fill title, publisher, author, url, date, kind,
-   sourceType, freshness, tags, synthesis, seniorTakeaway and useWhen.
+   sourceType, freshness, tags, synthesis, seniorTakeaway and useWhen. For
+   article/watch resources, also fill `articleSummary` so readers can understand
+   the source without opening it immediately.
 5. Normalize author values when several publisher labels point to the same
    writer or organization, for example "Linear Docs" and "Linear Changelog" ->
    "Linear". Keep individual authors or tech influencers as their own author
@@ -139,7 +146,8 @@ Before opening a PR:
 - [ ] I added only selected, high-signal resources.
 - [ ] Every resource has a source URL.
 - [ ] Every resource has an `author` value usable for Watchtower filtering.
-- [ ] Summaries are original and in French.
+- [ ] Summaries are original, in French, and dense enough to capture the
+      important information from each article.
 - [ ] Vendor, independent and community sources are labeled correctly.
 - [ ] I did not edit UI, architecture, package or workflow files for a content-only PR.
 - [ ] `npm run typecheck` passes.
@@ -162,6 +170,7 @@ For each resource, provide:
 - `freshness`
 - `tags`
 - `synthesis`
+- `articleSummary` for article/watch resources
 - `seniorTakeaway`
 - `useWhen`
 

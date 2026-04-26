@@ -45,11 +45,14 @@ When adding a resource:
 - Do not add beginner "build a chatbot in 5 minutes" content.
 - Do not import a full watch list blindly. Select signal, deduplicate, and
   explain why each retained source matters.
-- Write summaries in French.
+- Write summaries in French. Keep `synthesis` as the short "what this is about"
+  framing, and add `articleSummary` for article/watch resources: a richer
+  summary of the important information, roughly ten lines when useful, without
+  treating the line count as a fixed constraint.
 - Keep summaries original. Do not copy long source excerpts.
 - Always include `title`, `publisher`, `author`, `url`, `date`, `kind`,
   `sourceType`, `freshness`, `tags`, `synthesis`, `seniorTakeaway`, and
-  `useWhen`.
+  `useWhen`. Include `articleSummary` for article/watch resources.
 - Use `author` as the canonical "who wrote it" filter value. It can be a
   company, lab, standards body, individual author or tech influencer; normalize
   product/blog variants to the same author when useful, for example

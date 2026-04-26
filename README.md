@@ -6,7 +6,8 @@ métier avec la GenAI: agents de code, context engineering, workflows d'équipe,
 
 Ce projet n'est plus pensé comme une formation Next.js à valider module par
 module. L'application est un atlas de veille: des catégories, des sources
-originales, des synthèses courtes et des dossiers internes pour creuser.
+originales, des synthèses éditoriales denses et des dossiers internes pour
+creuser.
 
 ## Public visé
 
@@ -23,7 +24,8 @@ originales, des synthèses courtes et des dossiers internes pour creuser.
   [`fdelbrayelle/ai-watchtower`](https://github.com/fdelbrayelle/ai-watchtower).
 - Des catégories comme context engineering, agentic coding, process équipe,
   evals, sécurité, adoption entreprise et recherche critique.
-- Des synthèses en français avec lien vers la source originale.
+- Des synthèses en français, assez denses pour condenser les informations
+  importantes de chaque article, avec lien vers la source originale.
 - Des dossiers internes existants dans `content/*.md` pour les sujets de fond.
 - Une recherche dans la navigation pour retrouver une ressource ou un dossier
   depuis n'importe quelle page.
@@ -69,6 +71,7 @@ Chaque entrée doit fournir:
 - `freshness`: `recent`, `durable` ou `historical`
 - `tags`
 - `synthesis`
+- `articleSummary` pour les articles et ressources de veille
 - `seniorTakeaway`
 - `useWhen`
 
@@ -83,6 +86,11 @@ Règles éditoriales:
 - Garder les sources plus anciennes seulement si elles posent un concept durable.
 - Toujours distinguer source vendor, recherche indépendante et communauté.
 - Éviter les tutoriels débutants et les contenus framework-first.
+- Garder `synthesis` comme l'accroche courte qui explique de quoi parle la
+  ressource.
+- Pour chaque article ou ressource de veille, rédiger `articleSummary` comme un
+  résumé dense des informations importantes, autour d'une dizaine de lignes
+  quand c'est utile, sans en faire un compteur rigide.
 - Ne pas copier de longs extraits: écrire une synthèse originale et citer la
   source.
 
@@ -105,8 +113,10 @@ Workflow recommandé:
 4. Mapper les ressources retenues vers les catégories DevIA existantes, ou créer
    une catégorie seulement si elle apporte un axe durable.
 5. Renseigner `author` pour permettre le tri par auteur ou organisation, puis
-   rédiger `synthesis`, `seniorTakeaway` et `useWhen` en français sans recopier
-   la description d'origine.
+   rédiger `synthesis`, `articleSummary`, `seniorTakeaway` et `useWhen` en
+   français sans recopier la description d'origine. `articleSummary` doit
+   condenser les informations importantes de l'article, environ une dizaine de
+   lignes quand le contenu le justifie.
 6. Mettre à jour ou créer une spec dans `specs/` si l'import change le modèle
    métier.
 

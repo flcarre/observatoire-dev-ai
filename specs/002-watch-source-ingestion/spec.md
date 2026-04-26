@@ -61,7 +61,8 @@ selection plus courte, traçable et coherent avec les categories du projet.
 - **FR-003**: Imported resources MUST be mapped to framework-agnostic senior
   categories rather than preserving the source taxonomy blindly.
 - **FR-004**: Imported resources MUST include original source URL, synthesis,
-  senior takeaway, canonical author/organization and recommended use case.
+  article summary, senior takeaway, canonical author/organization and
+  recommended use case.
 - **FR-005**: README MUST explain how to contribute a repo/list of watch links.
 - **FR-006**: The home page SHOULD expose imported watch sources so provenance
   stays visible.

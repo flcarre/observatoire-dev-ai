@@ -67,6 +67,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
               resource.sourceType,
               resource.freshness,
               resource.synthesis,
+              resource.articleSummary,
               resource.seniorTakeaway,
               resource.useWhen,
               ...resource.tags,
@@ -257,6 +258,17 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                               </div>
 
                               <p className="mt-3 text-sm leading-6 text-fg/85">{resource.synthesis}</p>
+
+                              {resource.articleSummary && (
+                                <div className="mt-4 border border-border bg-bg p-4">
+                                  <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-fg">
+                                    Resume de l'article
+                                  </div>
+                                  <p className="mt-2 whitespace-pre-line text-sm leading-7 text-fg/90">
+                                    {resource.articleSummary}
+                                  </p>
+                                </div>
+                              )}
 
                               <div className="mt-4 grid gap-3 md:grid-cols-2">
                                 <div className="bg-muted/50 p-3">

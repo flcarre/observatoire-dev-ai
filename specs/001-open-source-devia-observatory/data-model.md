@@ -36,6 +36,8 @@ Fields:
 - `freshness`: one of `recent`, `durable`, `historical`.
 - `tags`: short terms used for filtering and scanning.
 - `synthesis`: compressed summary in French.
+- `articleSummary`: optional richer French summary for article/watch resources,
+  long enough to explain the source without opening it.
 - `seniorTakeaway`: practical lesson for senior developers.
 - `useWhen`: when to read or apply the resource.
 

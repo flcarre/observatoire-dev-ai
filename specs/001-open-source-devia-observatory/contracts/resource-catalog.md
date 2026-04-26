@@ -36,6 +36,7 @@ type Resource = {
   freshness: "recent" | "durable" | "historical";
   tags: string[];
   synthesis: string;
+  articleSummary?: string;
   seniorTakeaway: string;
   useWhen: string;
 };
@@ -45,7 +46,9 @@ type Resource = {
 
 - The home page MUST render all categories and resources from this contract.
 - The client explorer MUST support text search across title, publisher, author,
-  tags, synthesis, senior takeaway and use case.
+  tags, synthesis, article summary, senior takeaway and use case.
+- Resource cards SHOULD display `articleSummary` when present so readers can
+  understand the source without opening it immediately.
 - The client explorer MUST support category filtering.
 - The client explorer MUST support filtering by canonical resource author, where
   author can be a company, organization, individual author or tech influencer.
