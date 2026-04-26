@@ -39,6 +39,7 @@ type ResourceEntry = {
   categoryId: string;
   anchorId: string;
   synthesis: string;
+  articleSummary?: string;
   tags: string[];
 };
 
@@ -67,6 +68,7 @@ export function Sidebar({
           resource.author,
           resource.categoryTitle,
           resource.synthesis,
+          resource.articleSummary,
           ...resource.tags,
         ]
           .join(" ")

@@ -105,7 +105,7 @@ règles éditoriales et son workflow Spec Kit afin de proposer une contribution.
 
 - **FR-001**: System MUST present the primary product as an observatory of GenAI-era software engineering resources for senior developers.
 - **FR-002**: System MUST organize resources into thematic categories that are independent from any programming language or web framework.
-- **FR-003**: System MUST expose for each resource: title, publisher/source, canonical author or organization, date or recency, source URL, source type, tags, synthesis, senior takeaway, and recommended use case.
+- **FR-003**: System MUST expose for each resource: title, publisher/source, canonical author or organization, date or recency, source URL, source type, tags, synthesis, senior takeaway, recommended use case, and a richer article summary when available.
 - **FR-004**: Users MUST be able to filter resources by category, filter by canonical author/organization, and search by keyword.
 - **FR-005**: System MUST preserve access to useful existing internal dossiers while renaming their role away from mandatory training modules.
 - **FR-006**: System MUST include Spec Kit artifacts documenting product intent, plan, data model, contracts, and tasks.

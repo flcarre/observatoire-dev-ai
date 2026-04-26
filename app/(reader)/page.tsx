@@ -46,6 +46,7 @@ Regles:
 - Dedoublonne les URLs existantes.
 - Rejette les contenus debutants, framework-first ou purement marketing.
 - Ecris les syntheses finales en francais.
+- Garde synthesis comme accroche courte, puis ajoute articleSummary pour expliquer l'article sans devoir l'ouvrir.
 - Ne copie pas de longs extraits.
 - Garde la source originale tracable.
 - Renseigne author comme auteur, entreprise, laboratoire, organisme ou influenceur tech canonique.
@@ -55,7 +56,7 @@ Implementation:
 1. Si la source est un repo/liste/README, ajoute ou mets a jour watchSources.
 2. Ajoute les ressources retenues dans les categories existantes.
 3. Cree une categorie seulement si elle est durable et framework-agnostic.
-4. Renseigne title, publisher, author, url, date, kind, sourceType, freshness, tags, synthesis, seniorTakeaway et useWhen.
+4. Renseigne title, publisher, author, url, date, kind, sourceType, freshness, tags, synthesis, articleSummary, seniorTakeaway et useWhen.
 
 Validation:
 - npm run typecheck
@@ -216,7 +217,7 @@ export default async function HomePage() {
               </p>
               <p>
                 Le principe: peu de bruit, beaucoup de signal, sources tracables,
-                syntheses originales en francais.
+                syntheses originales en francais, avec resumes lisibles pour les articles de veille.
               </p>
             </div>
           </div>

@@ -42,6 +42,7 @@ export function createObservatoryUseCases({
           categoryId: resource.categoryId,
           anchorId: resource.anchorId,
           synthesis: resource.synthesis,
+          articleSummary: resource.articleSummary,
           tags: resource.tags,
         })),
       };

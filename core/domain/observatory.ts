@@ -21,6 +21,7 @@ export type Resource = {
   freshness: Freshness;
   tags: string[];
   synthesis: string;
+  articleSummary?: string;
   seniorTakeaway: string;
   useWhen: string;
 };
