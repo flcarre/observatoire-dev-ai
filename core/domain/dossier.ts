@@ -12,4 +12,4 @@ export type Dossier = DossierMeta & {
   raw: string;
 };
 
-export type DossierNavigationItem = Pick<DossierMeta, "slug" | "title" | "number"> | null;
+export type DossierNavigationItem = Pick<DossierMeta, "slug" | "title"> | null;

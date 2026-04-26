@@ -20,7 +20,6 @@ import { ThemeToggle } from "./theme-toggle";
 
 type ModuleEntry = {
   slug: string;
-  number: string;
   title: string;
   hook: string;
 };
@@ -260,13 +259,13 @@ export function Sidebar({
                     >
                       <span
                         className={cn(
-                          "mt-0.5 inline-flex h-5 w-7 shrink-0 items-center justify-center rounded text-[10px] font-mono font-semibold tabular-nums",
+                          "mt-0.5 inline-flex h-5 w-7 shrink-0 items-center justify-center rounded",
                           isActive
                             ? "bg-accent text-accent-fg"
                             : "bg-muted text-muted-fg",
                         )}
                       >
-                        {m.number}
+                        <FolderOpen size={13} />
                       </span>
                       <span className="line-clamp-2 leading-snug">{m.title}</span>
                     </Link>

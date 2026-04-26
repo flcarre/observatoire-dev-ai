@@ -173,7 +173,7 @@ export default async function HomePage() {
                 className="group border border-border bg-card p-4 transition hover:border-accent hover:bg-bg"
               >
                 <div className="flex items-center justify-between gap-3 text-[11px] uppercase tracking-wide text-muted-fg">
-                  <span>Dossier {dossier.number}</span>
+                  <span>Dossier de fond</span>
                   <span className="inline-flex items-center gap-1 font-normal normal-case tracking-normal">
                     <Clock size={12} />
                     ~{dossier.readingTimeMin} min
