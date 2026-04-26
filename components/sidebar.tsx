@@ -9,6 +9,7 @@ import {
   BookOpen,
   Books,
   FolderOpen,
+  GithubLogo,
   GitPullRequest,
   House,
   List,
@@ -17,6 +18,8 @@ import {
 } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
+
+const repositoryUrl = "https://github.com/flcarre/devai";
 
 type ModuleEntry = {
   slug: string;
@@ -293,6 +296,16 @@ export function Sidebar({
               Ouvrir la Watchtower
               <FolderOpen size={14} className="ml-auto" />
             </Link>
+            <a
+              href={repositoryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-border px-3 py-2 text-xs text-muted-fg transition hover:border-accent hover:text-fg"
+            >
+              <GithubLogo size={14} />
+              Repo GitHub
+              <GitPullRequest size={14} className="ml-auto" />
+            </a>
           </div>
         </div>
       </aside>

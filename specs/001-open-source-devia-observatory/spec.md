@@ -117,6 +117,7 @@ règles éditoriales et son workflow Spec Kit afin de proposer une contribution.
 - **FR-012**: System MUST explain how contributors can use coding agents to add articles or watch repositories and open traceable pull requests.
 - **FR-013**: System MUST provide a dedicated Watchtower page for curated external watch resources.
 - **FR-014**: System MUST provide a dedicated long-form articles page that lists every internal dossier exposed by the repository.
+- **FR-015**: System MUST expose the public GitHub repository from the primary site UI so readers can inspect, fork or contribute without hunting through documentation.
 
 ### Key Entities *(include if feature involves data)*
 
