@@ -62,7 +62,7 @@ Les ressources sont regroupées par catégorie dans `lib/resources.ts`.
 
 Chaque entrée doit fournir:
 
-- `title`, `publisher`, `url`, `date`
+- `title`, `publisher`, `author`, `url`, `date`
 - `kind`: `engineering`, `docs`, `research`, `report`, `product`,
   `case-study` ou `community`
 - `sourceType`: `primary`, `independent` ou `community`
@@ -74,6 +74,10 @@ Chaque entrée doit fournir:
 
 Règles éditoriales:
 
+- Renseigner `author` comme valeur canonique de tri "qui l'a écrit": entreprise,
+  laboratoire, organisme, auteur individuel ou influenceur tech. Normaliser les
+  variantes quand elles désignent le même acteur, par exemple `GitHub Blog` et
+  `GitHub Docs` -> `GitHub`.
 - Préférer les sources récentes pour les outils, prix, pratiques produit et
   capacités agents.
 - Garder les sources plus anciennes seulement si elles posent un concept durable.
@@ -100,7 +104,8 @@ Workflow recommandé:
    framework-first ou purement marketing.
 4. Mapper les ressources retenues vers les catégories DevIA existantes, ou créer
    une catégorie seulement si elle apporte un axe durable.
-5. Rédiger `synthesis`, `seniorTakeaway` et `useWhen` en français sans recopier
+5. Renseigner `author` pour permettre le tri par auteur ou organisation, puis
+   rédiger `synthesis`, `seniorTakeaway` et `useWhen` en français sans recopier
    la description d'origine.
 6. Mettre à jour ou créer une spec dans `specs/` si l'import change le modèle
    métier.

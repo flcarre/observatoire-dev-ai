@@ -56,6 +56,10 @@ specs/001-open-source-devia-observatory/
 app/
 ├── (reader)/
 │   ├── page.tsx
+│   ├── watchtower/
+│   │   └── page.tsx
+│   ├── dossiers/
+│   │   └── page.tsx
 │   └── layout.tsx
 ├── globals.css
 └── layout.tsx

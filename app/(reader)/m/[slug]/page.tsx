@@ -39,7 +39,7 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
       <article className="flex-1 min-w-0 mx-auto max-w-3xl px-6 py-10 lg:py-14">
         <div className="mb-8 not-prose">
           <div className="text-xs uppercase tracking-wider text-muted-fg mb-2">
-            Dossier de fond
+            Article de fond
           </div>
           <div className="flex items-start justify-between gap-4 flex-wrap">
             <div>

@@ -72,6 +72,8 @@ Rules:
 - Write all final summaries in French.
 - Do not copy long excerpts from sources.
 - Preserve source traceability.
+- Fill `author` with the canonical person, company, lab or organization behind
+  the resource so the Watchtower can be filtered by "who wrote it".
 
 Implementation:
 1. If the input is a repo/list/README, add or update watchSources in
@@ -80,9 +82,13 @@ Implementation:
 2. Add selected resources to the best existing ResourceCategory.
 3. Create a new category only if no existing category fits and the category is
    framework-agnostic and durable.
-4. For every resource, fill title, publisher, url, date, kind, sourceType,
-   freshness, tags, synthesis, seniorTakeaway and useWhen.
-5. Update README.md or specs only if the contribution changes the model,
+4. For every resource, fill title, publisher, author, url, date, kind,
+   sourceType, freshness, tags, synthesis, seniorTakeaway and useWhen.
+5. Normalize author values when several publisher labels point to the same
+   writer or organization, for example "Linear Docs" and "Linear Changelog" ->
+   "Linear". Keep individual authors or tech influencers as their own author
+   value.
+6. Update README.md or specs only if the contribution changes the model,
    contribution workflow or public behavior.
 
 Validation:
@@ -132,6 +138,7 @@ Before opening a PR:
 - [ ] I read `AGENTS.md`.
 - [ ] I added only selected, high-signal resources.
 - [ ] Every resource has a source URL.
+- [ ] Every resource has an `author` value usable for Watchtower filtering.
 - [ ] Summaries are original and in French.
 - [ ] Vendor, independent and community sources are labeled correctly.
 - [ ] I did not edit UI, architecture, package or workflow files for a content-only PR.
@@ -147,6 +154,7 @@ For each resource, provide:
 
 - `title`
 - `publisher`
+- `author`
 - `url`
 - `date`
 - `kind`
@@ -156,6 +164,11 @@ For each resource, provide:
 - `synthesis`
 - `seniorTakeaway`
 - `useWhen`
+
+Use `author` as the canonical filter label for who wrote the resource. It can
+be a company, lab, standards body, individual author or tech influencer. Keep
+`publisher` for the visible source label when it is more specific than the
+author, such as `GitHub Changelog` with author `GitHub`.
 
 If importing from a repo or watch list, also update `watchSources`.
 

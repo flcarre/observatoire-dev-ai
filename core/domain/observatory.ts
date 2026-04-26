@@ -13,6 +13,7 @@ export type Freshness = "recent" | "durable" | "historical";
 export type Resource = {
   title: string;
   publisher: string;
+  author: string;
   url: string;
   date: string;
   kind: ResourceKind;
@@ -60,6 +61,11 @@ export type ResourceStats = {
   importedResourceCount: number;
 };
 
+export type ResourceAuthor = {
+  name: string;
+  resourceCount: number;
+};
+
 export function slugifyResourceTitle(title: string) {
   return title
     .toLowerCase()
@@ -82,6 +88,20 @@ export function indexResources(categories: ResourceCategory[]): IndexedResource[
       categoryTitle: category.title,
       anchorId: getResourceAnchorId(category.id, resource.title),
     })),
+  );
+}
+
+export function listResourceAuthors(categories: ResourceCategory[]): ResourceAuthor[] {
+  const counts = new Map<string, number>();
+
+  for (const category of categories) {
+    for (const resource of category.resources) {
+      counts.set(resource.author, (counts.get(resource.author) ?? 0) + 1);
+    }
+  }
+
+  return Array.from(counts, ([name, resourceCount]) => ({ name, resourceCount })).sort(
+    (a, b) => b.resourceCount - a.resourceCount || a.name.localeCompare(b.name),
   );
 }
 

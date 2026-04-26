@@ -28,7 +28,7 @@ takeaway senior, usage conseille et lien original.
    nouveaux themes utiles.
 2. **Given** une ressource candidate, **When** elle est retenue, **Then** elle
    obtient une synthese francaise originale, une source typee et une valeur
-   senior explicite.
+   senior explicite, avec un auteur ou une organisation canonique pour le tri.
 3. **Given** une source externe importee, **When** un lecteur consulte
    l'accueil, **Then** il voit d'ou vient cette veille et peut ouvrir la source
    d'origine.
@@ -61,7 +61,7 @@ selection plus courte, traçable et coherent avec les categories du projet.
 - **FR-003**: Imported resources MUST be mapped to framework-agnostic senior
   categories rather than preserving the source taxonomy blindly.
 - **FR-004**: Imported resources MUST include original source URL, synthesis,
-  senior takeaway and recommended use case.
+  senior takeaway, canonical author/organization and recommended use case.
 - **FR-005**: README MUST explain how to contribute a repo/list of watch links.
 - **FR-006**: The home page SHOULD expose imported watch sources so provenance
   stays visible.

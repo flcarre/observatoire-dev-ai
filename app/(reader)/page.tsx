@@ -48,12 +48,14 @@ Regles:
 - Ecris les syntheses finales en francais.
 - Ne copie pas de longs extraits.
 - Garde la source originale tracable.
+- Renseigne author comme auteur, entreprise, laboratoire, organisme ou influenceur tech canonique.
+- Normalise les variantes d'une meme organisation, par exemple GitHub Docs et GitHub Blog -> GitHub.
 
 Implementation:
 1. Si la source est un repo/liste/README, ajoute ou mets a jour watchSources.
 2. Ajoute les ressources retenues dans les categories existantes.
 3. Cree une categorie seulement si elle est durable et framework-agnostic.
-4. Renseigne title, publisher, url, date, kind, sourceType, freshness, tags, synthesis, seniorTakeaway et useWhen.
+4. Renseigne title, publisher, author, url, date, kind, sourceType, freshness, tags, synthesis, seniorTakeaway et useWhen.
 
 Validation:
 - npm run typecheck
@@ -86,20 +88,20 @@ export default async function HomePage() {
               les workflows d'equipe et les outils utilises dans l'industrie.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#context-engineering"
+              <Link
+                href="/watchtower"
                 className="inline-flex items-center gap-2 bg-accent px-4 py-2 text-sm font-medium text-accent-fg transition hover:opacity-90"
               >
-                Explorer la veille
+                Ouvrir la Watchtower
                 <ArrowRight size={15} weight="bold" />
-              </a>
-              <a
-                href="#dossiers"
+              </Link>
+              <Link
+                href="/dossiers"
                 className="inline-flex items-center gap-2 border border-border bg-card px-4 py-2 text-sm font-medium transition hover:bg-muted"
               >
-                Lire un dossier
+                Lire les articles de fond
                 <Rows size={15} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -153,16 +155,18 @@ export default async function HomePage() {
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-wide text-muted-fg">
-                Dossiers de fond
+                Articles de fond
               </div>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight">Approfondir un sujet</h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-fg">
-                Les anciens modules utiles restent disponibles comme dossiers longs. Ils
+                Les anciens modules utiles restent disponibles comme articles longs. Ils
                 ne sont pas un parcours obligatoire: choisissez le sujet qui complete
                 votre veille.
               </p>
             </div>
-            <div className="font-mono text-sm text-muted-fg">{dossiers.length} dossiers</div>
+            <Link href="/dossiers" className="text-sm font-medium text-muted-fg transition hover:text-fg">
+              Voir tous les articles
+            </Link>
           </div>
 
           <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
@@ -173,7 +177,7 @@ export default async function HomePage() {
                 className="group border border-border bg-card p-4 transition hover:border-accent hover:bg-bg"
               >
                 <div className="flex items-center justify-between gap-3 text-[11px] uppercase tracking-wide text-muted-fg">
-                  <span>Dossier de fond</span>
+                  <span>Article de fond</span>
                   <span className="inline-flex items-center gap-1 font-normal normal-case tracking-normal">
                     <Clock size={12} />
                     ~{dossier.readingTimeMin} min

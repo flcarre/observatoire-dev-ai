@@ -27,6 +27,8 @@ Fields:
 
 - `title`: source title.
 - `publisher`: organization or author.
+- `author`: canonical "who wrote it" label used for filtering. It can be a
+  company, lab, standards body, individual author or tech influencer.
 - `url`: original source URL.
 - `date`: source date, update date, or "rolling" when it is a living page.
 - `kind`: one of `engineering`, `docs`, `research`, `report`, `product`, `case-study`, `community`.
@@ -39,8 +41,10 @@ Fields:
 
 Validation:
 
-- `url`, `title`, `publisher`, `synthesis`, `seniorTakeaway`, and `useWhen`
-  MUST be non-empty.
+- `url`, `title`, `publisher`, `author`, `synthesis`, `seniorTakeaway`, and
+  `useWhen` MUST be non-empty.
+- `author` SHOULD normalize publisher variants that refer to the same actor
+  while keeping individual authors or influencers distinct.
 - Recent product/tool resources SHOULD be from 2025-10 or later.
 - Older resources MUST be marked `durable` or `historical`.
 

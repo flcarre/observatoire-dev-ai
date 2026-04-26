@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import {
   ArrowSquareOut,
   Books,
+  Buildings,
   FunnelSimple,
   MagnifyingGlass,
   SealCheck,
@@ -11,7 +12,7 @@ import {
 } from "@phosphor-icons/react";
 import type { Dossier } from "@/core/domain/dossier";
 import type { ResourceCategory } from "@/core/domain/observatory";
-import { getResourceAnchorId } from "@/core/domain/observatory";
+import { getResourceAnchorId, listResourceAuthors } from "@/core/domain/observatory";
 import { cn } from "@/lib/utils";
 
 type ResourceExplorerProps = {
@@ -33,11 +34,17 @@ const freshnessLabels = {
 
 export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps) {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedAuthor, setSelectedAuthor] = useState("all");
   const [query, setQuery] = useState("");
+  const totalResourceCount = categories.reduce(
+    (sum, category) => sum + category.resources.length,
+    0,
+  );
 
   const dossierBySlug = useMemo(() => new Map(dossiers.map((dossier) => [dossier.slug, dossier])), [
     dossiers,
   ]);
+  const authors = useMemo(() => listResourceAuthors(categories), [categories]);
 
   const visibleCategories = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -45,30 +52,40 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
     return categories
       .filter((category) => selectedCategory === "all" || category.id === selectedCategory)
       .map((category) => {
-        const resources = normalizedQuery
-          ? category.resources.filter((resource) => {
-              const haystack = [
-                resource.title,
-                resource.publisher,
-                resource.date,
-                resource.kind,
-                resource.sourceType,
-                resource.freshness,
-                resource.synthesis,
-                resource.seniorTakeaway,
-                resource.useWhen,
-                ...resource.tags,
-              ]
-                .join(" ")
-                .toLowerCase();
-              return haystack.includes(normalizedQuery);
-            })
-          : category.resources;
+        const resources = category.resources.filter((resource) => {
+          if (selectedAuthor !== "all" && resource.author !== selectedAuthor) {
+            return false;
+          }
+
+          if (normalizedQuery) {
+            const haystack = [
+              resource.title,
+              resource.publisher,
+              resource.author,
+              resource.date,
+              resource.kind,
+              resource.sourceType,
+              resource.freshness,
+              resource.synthesis,
+              resource.seniorTakeaway,
+              resource.useWhen,
+              ...resource.tags,
+            ]
+              .join(" ")
+              .toLowerCase();
+            return haystack.includes(normalizedQuery);
+          }
+
+          return true;
+        });
 
         return { ...category, resources };
       })
-      .filter((category) => category.resources.length > 0 || !normalizedQuery);
-  }, [categories, query, selectedCategory]);
+      .filter(
+        (category) =>
+          category.resources.length > 0 || (!normalizedQuery && selectedAuthor === "all"),
+      );
+  }, [categories, query, selectedAuthor, selectedCategory]);
 
   const visibleResourceCount = visibleCategories.reduce(
     (sum, category) => sum + category.resources.length,
@@ -93,7 +110,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
               )}
             >
               <span>Toute la veille</span>
-              <span className="font-mono text-xs">{categories.length}</span>
+              <span className="font-mono text-xs">{totalResourceCount}</span>
             </button>
             {categories.map((category) => (
               <button
@@ -116,18 +133,38 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
 
         <div className="min-w-0">
           <div className="border border-border bg-card p-3 sm:p-4">
-            <label className="relative block">
-              <MagnifyingGlass
-                size={18}
-                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-fg"
-              />
-              <input
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Chercher: context, Codex, Linear, evals, securite..."
-                className="h-11 w-full border border-border bg-bg pl-10 pr-3 text-sm outline-none transition placeholder:text-muted-fg focus:border-accent"
-              />
-            </label>
+            <div className="grid gap-3 md:grid-cols-[minmax(0,1fr)_260px]">
+              <label className="relative block">
+                <MagnifyingGlass
+                  size={18}
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-fg"
+                />
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Chercher: context, Codex, Linear, evals, securite..."
+                  className="h-11 w-full border border-border bg-bg pl-10 pr-3 text-sm outline-none transition placeholder:text-muted-fg focus:border-accent"
+                />
+              </label>
+              <label className="relative block">
+                <Buildings
+                  size={18}
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-fg"
+                />
+                <select
+                  value={selectedAuthor}
+                  onChange={(event) => setSelectedAuthor(event.target.value)}
+                  className="h-11 w-full appearance-none border border-border bg-bg pl-10 pr-8 text-sm outline-none transition focus:border-accent"
+                >
+                  <option value="all">Tous auteurs / orgs</option>
+                  {authors.map((author) => (
+                    <option key={author.name} value={author.name}>
+                      {author.name} ({author.resourceCount})
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
             <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-muted-fg">
               <span className="inline-flex items-center gap-1 border border-border px-2 py-1">
                 <SealCheck size={13} />
@@ -137,6 +174,12 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                 <Sparkle size={13} />
                 Mis a jour avril 2026
               </span>
+              {selectedAuthor !== "all" && (
+                <span className="inline-flex items-center gap-1 border border-border px-2 py-1">
+                  <Buildings size={13} />
+                  {selectedAuthor}
+                </span>
+              )}
             </div>
           </div>
 
@@ -148,6 +191,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                 onClick={() => {
                   setQuery("");
                   setSelectedCategory("all");
+                  setSelectedAuthor("all");
                 }}
                 className="mt-3 border border-border px-3 py-2 text-xs font-medium text-muted-fg transition hover:bg-muted hover:text-fg"
               >
@@ -185,7 +229,13 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                               <div className="flex flex-wrap items-start justify-between gap-3">
                                 <div className="min-w-0">
                                   <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-wide text-muted-fg">
-                                    <span>{resource.publisher}</span>
+                                    <span>{resource.author}</span>
+                                    {resource.author !== resource.publisher && (
+                                      <>
+                                        <span className="h-1 w-1 bg-border" />
+                                        <span>{resource.publisher}</span>
+                                      </>
+                                    )}
                                     <span className="h-1 w-1 bg-border" />
                                     <span>{resource.date}</span>
                                     <span className="h-1 w-1 bg-border" />
@@ -245,7 +295,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                         <aside className="border border-border bg-card p-4 xl:self-start">
                           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-fg">
                             <Books size={14} />
-                            Dossiers internes
+                            Articles lies
                           </div>
                           <div className="mt-3 space-y-2">
                             {relatedDossiers.map((dossier) => (

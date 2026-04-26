@@ -21,6 +21,7 @@ type ResourceCategory = {
 type Resource = {
   title: string;
   publisher: string;
+  author: string;
   url: string;
   date: string;
   kind:
@@ -43,9 +44,11 @@ type Resource = {
 ## UI Behavior Contract
 
 - The home page MUST render all categories and resources from this contract.
-- The client explorer MUST support text search across title, publisher, tags,
-  synthesis, senior takeaway and use case.
+- The client explorer MUST support text search across title, publisher, author,
+  tags, synthesis, senior takeaway and use case.
 - The client explorer MUST support category filtering.
+- The client explorer MUST support filtering by canonical resource author, where
+  author can be a company, organization, individual author or tech influencer.
 - The sidebar MUST support search across curated resources and internal dossiers.
 - Resource search results SHOULD link to stable anchors on the observatory home page.
 - External source links MUST open in a new tab with safe `rel` attributes.

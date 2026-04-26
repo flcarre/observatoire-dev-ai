@@ -27,11 +27,15 @@ ouvrir sa source originale sans passer par un module linéaire.
    **Then** il voit une interface de veille avec catégories, ressources, dates
    et sources, pas un appel à "commencer une formation".
 2. **Given** une ressource listée, **When** l'utilisateur l'inspecte,
-   **Then** il voit un résumé, une source, un niveau de fraîcheur, un usage
-   conseillé, et un lien externe vers l'article ou document original.
+   **Then** il voit un résumé, une source, l'auteur ou organisation canonique,
+   un niveau de fraîcheur, un usage conseillé, et un lien externe vers l'article
+   ou document original.
 3. **Given** un utilisateur qui cherche "context engineering", **When** il
    filtre ou utilise la recherche, **Then** les ressources pertinentes restent
    visibles et les autres sont masquées.
+4. **Given** un lecteur dans la navigation globale, **When** il ouvre
+   "Watchtower", **Then** il arrive sur une page de veille dédiée listant les
+   axes, ressources, sources importées et liens vers les contenus longs.
 
 ---
 
@@ -52,7 +56,14 @@ dossier interne lié et revenir à l'observatoire.
 1. **Given** une catégorie avec contenu interne associé, **When** l'utilisateur
    clique sur un dossier, **Then** il arrive sur la page de lecture existante.
 2. **Given** la sidebar, **When** l'utilisateur lit la navigation, **Then** les
-   anciens modules sont nommés comme dossiers et non comme étapes de formation.
+   anciens modules sont nommés comme articles ou dossiers de fond et non comme
+   étapes de formation.
+3. **Given** la sidebar, **When** de nouveaux contenus existent dans
+   `content/*.md`, **Then** tous les articles de fond exposés par le dépôt sont
+   visibles sans liste manuelle de favoris.
+4. **Given** un lecteur qui veut du contenu long, **When** il ouvre la page
+   "Articles de fond", **Then** il voit l'ensemble des anciens modules utiles
+   présentés comme articles approfondis.
 
 ---
 
@@ -94,8 +105,8 @@ règles éditoriales et son workflow Spec Kit afin de proposer une contribution.
 
 - **FR-001**: System MUST present the primary product as an observatory of GenAI-era software engineering resources for senior developers.
 - **FR-002**: System MUST organize resources into thematic categories that are independent from any programming language or web framework.
-- **FR-003**: System MUST expose for each resource: title, publisher/source, date or recency, source URL, source type, tags, synthesis, senior takeaway, and recommended use case.
-- **FR-004**: Users MUST be able to filter resources by category and search by keyword.
+- **FR-003**: System MUST expose for each resource: title, publisher/source, canonical author or organization, date or recency, source URL, source type, tags, synthesis, senior takeaway, and recommended use case.
+- **FR-004**: Users MUST be able to filter resources by category, filter by canonical author/organization, and search by keyword.
 - **FR-005**: System MUST preserve access to useful existing internal dossiers while renaming their role away from mandatory training modules.
 - **FR-006**: System MUST include Spec Kit artifacts documenting product intent, plan, data model, contracts, and tasks.
 - **FR-007**: System MUST include open-source repository documentation covering local setup, contribution model, content curation rules, and licensing.
@@ -104,6 +115,8 @@ règles éditoriales et son workflow Spec Kit afin de proposer une contribution.
 - **FR-010**: System MUST provide global navigation search across curated resources and internal dossiers from the sidebar.
 - **FR-011**: Sidebar navigation MUST prioritize observatory categories over legacy framework-specific dossiers.
 - **FR-012**: System MUST explain how contributors can use coding agents to add articles or watch repositories and open traceable pull requests.
+- **FR-013**: System MUST provide a dedicated Watchtower page for curated external watch resources.
+- **FR-014**: System MUST provide a dedicated long-form articles page that lists every internal dossier exposed by the repository.
 
 ### Key Entities *(include if feature involves data)*
 
