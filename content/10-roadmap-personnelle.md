@@ -42,8 +42,6 @@ flowchart TD
     Commit --> Next([Tâche suivante])
 ```
 
-> Version interactive avec branchements détaillés : [Décision coder vs déléguer](/diagrammes#agent-decision).
-
 ### Anti-patterns à éviter
 
 - **Kitchen sink session** : ne pas faire 5 tâches non liées dans la même session. Failures compoundent.
@@ -80,13 +78,13 @@ flowchart TD
 - Adopter plan mode systématiquement sur les PRs multi-fichiers.
 - **Cible mois 1** : 50 % de vos PRs passent par plan mode + agent ; vous mesurez le delta de qualité (PRs reviewées, bugs trouvés).
 
-### Mois 2 — AI SDK 6 et apps fullstack
+### Mois 2 — Choix d'outils et cas d'usage reels
 
-- Lire toute la doc AI SDK 6 (généralement 2–3 jours).
-- Construire un proof of concept avec `streamText`, `Output.object`, `useChat` v6 + AI Gateway.
-- Brancher une feature IA dans un projet existant.
-- Standardiser : `getModel()` helper, gateway-routed model strings, BYOK pattern.
-- **Cible mois 2** : vous shipped 1 feature IA en prod avec resumable streams + observabilité (logs OpenTelemetry GenAI).
+- Comparer Codex, Claude Code, Cursor, Copilot coding agent et un outil local/open source sur le meme vrai ticket.
+- Construire une matrice de cas d'usage : comprehension de code, refactor, migration, tests, review, docs, investigation incident.
+- Standardiser les criteres de choix : securite, droits, audit trail, integration Git, cout, latence, qualite de review.
+- Documenter les conditions d'usage dans `AGENTS.md` ou une doc d'equipe agnostique.
+- **Cible mois 2** : vous avez 3 cas d'usage repetables, mesures et expliques a l'equipe.
 
 ### Mois 3 — Evals et observabilité
 
@@ -239,7 +237,7 @@ C'est le profil staff/principal IA-native que les boites top tech recrutent en 2
 
 ## 11. Ressources finales pour aller plus loin
 
-Cf. [annexes-sources.md](./annexes-sources.md) pour la bibliographie complète, organisée par sujet.
+La bibliographie vivante est maintenue directement dans les ressources de l'observatoire et dans `lib/resources.ts`.
 
 Trois lectures uniques à faire dans la semaine pour calibrer votre direction :
 

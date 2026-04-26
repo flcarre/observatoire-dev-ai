@@ -25,8 +25,6 @@ flowchart TD
     Q4 -->|Non, signal d'eval clair| Eval[Evaluator-optimizer]
 ```
 
-> Voir aussi le diagramme interactif [Pattern Orchestrator-Worker](/diagrammes#multi-agent).
-
 ## 2. Les cinq primitives workflow (par complexité croissante)
 
 ### 2.1 Prompt chaining

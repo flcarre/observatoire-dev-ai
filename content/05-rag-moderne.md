@@ -60,8 +60,6 @@ flowchart LR
 
 Étapes : query rewrite (Haiku) → dense + BM25 en parallèle (top-200) → fusion RRF (top-100) → rerank cross-encoder (top-10) → optionnel ColBERT MaxSim si précision-critique → assemble avec citations.
 
-> Version interactive zoomable : [Pipeline RAG hybride](/diagrammes#rag-pipeline).
-
 ### Code (TypeScript, Vercel + pgvector)
 
 ```typescript

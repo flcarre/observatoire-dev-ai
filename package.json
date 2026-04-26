@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:contribution-scope": "node scripts/check-contribution-scope.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
-    "@xyflow/react": "^12.3.6",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "mermaid": "^11.4.0",

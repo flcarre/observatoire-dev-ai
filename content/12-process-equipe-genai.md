@@ -391,10 +391,6 @@ Possible *parce que* :
 - [ ] Onboarding structuré : pair les 3 premières PRs IA.
 - [ ] Audit trimestriel : skills, hooks, judges, datasets.
 
-## Visualisation
-
-Le diagramme [Process et gates en équipe](/diagrammes#team-process) montre comment une PR traverse les gates AI reviewer → CI → evals → human, et les ownerships par couche.
-
 ## Ce qu'il faut emporter de ce module
 
 1. **Sans gouvernance partagée, l'IA crée du chaos en équipe.** L'individu devient 2× plus productif, mais l'équipe peut devenir 2× moins.

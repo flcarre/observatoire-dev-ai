@@ -1,9 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Inter } from "next/font/google";
+import { IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const sans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
@@ -12,11 +17,11 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Formation Dev IA Sénior — Next.js + Vercel + Agents",
-    template: "%s | Formation Dev IA",
+    default: "Observatoire DevIA — Veille GenAI pour développeurs seniors",
+    template: "%s | Observatoire DevIA",
   },
   description:
-    "Formation pour devs séniors : Next.js 16, Vercel Fluid Compute, AI SDK 6, agents, RAG, evals, prod patterns. Avril 2026.",
+    "Ressources open source pour développeurs seniors : agents de code, context engineering, process équipe, evals, sécurité et veille GenAI. Avril 2026.",
 };
 
 export const viewport: Viewport = {

@@ -1,26 +1,45 @@
-# Formation Dev IA — Plateforme Next.js
+# Observatoire DevIA
 
-Plateforme web Next.js pour consommer la formation **Dev IA Sénior — Next.js + Vercel + Agents (avril 2026)** depuis n'importe où, avec :
+Ressources open source pour développeurs seniors qui veulent suivre le virage du
+métier avec la GenAI: agents de code, context engineering, workflows d'équipe,
+évaluation, sécurité, outils et adoption entreprise.
 
-- Lecture confortable desktop / mobile / dark mode
-- Sidebar de navigation, table des matières par module, scroll-spy
-- 13 modules + annexes (état de l'art, Next.js/Vercel, AI SDK 6, agents, RAG, evals, sécurité, jobs, repo template, roadmap, **context engineering**, **process équipe**)
-- Diagrammes Mermaid embarqués dans le contenu
-- 9 diagrammes React Flow interactifs (page dédiée)
-- Code highlighté (Shiki) avec bouton copier
-- Progression sauvegardée localement (sans compte)
+Ce projet n'est plus pensé comme une formation Next.js à valider module par
+module. L'application est un atlas de veille: des catégories, des sources
+originales, des synthèses courtes et des dossiers internes pour creuser.
+
+## Public visé
+
+- Développeurs seniors, staff engineers, tech leads, engineering managers hands-on.
+- Équipes qui connaissent déjà le développement logiciel en entreprise.
+- Personnes qui veulent comprendre comment travailler mieux avec Codex, Claude
+  Code, Cursor, Copilot, Linear, Sourcegraph, Devin, etc. sans dépendre d'un
+  framework ou langage particulier.
+
+## Ce que contient l'application
+
+- Un catalogue typé de ressources dans `lib/resources.ts`.
+- Un registre de veilles externes importées, par exemple
+  [`fdelbrayelle/ai-watchtower`](https://github.com/fdelbrayelle/ai-watchtower).
+- Des catégories comme context engineering, agentic coding, process équipe,
+  evals, sécurité, adoption entreprise et recherche critique.
+- Des synthèses en français avec lien vers la source originale.
+- Des dossiers internes existants dans `content/*.md` pour les sujets de fond.
+- Une recherche dans la navigation pour retrouver une ressource ou un dossier
+  depuis n'importe quelle page.
+- Une interface filtrable et statique, sans compte, DB, suivi utilisateur ou
+  tracking par défaut.
+- Une documentation métier Spec Kit dans `specs/001-open-source-devia-observatory/`.
 
 ## Stack
 
-- **Next.js 15** (App Router, RSC, Server Components)
-- **React 19** + **TypeScript** strict
-- **Tailwind CSS** + `@tailwindcss/typography`
-- **react-markdown** + `remark-gfm` pour le rendu MD
-- **Shiki** pour le code highlight
-- **Mermaid** pour les diagrammes inline
-- **@xyflow/react** (React Flow v12) pour les diagrammes interactifs
-- **next-themes** pour dark/light/system
-- **@phosphor-icons/react** pour l'iconographie
+- Next.js 15, React 19, TypeScript strict
+- Tailwind CSS
+- `react-markdown`, `remark-gfm`, Shiki, Mermaid
+- Phosphor Icons
+
+Le projet reste statique et facilement déployable sur Vercel ou tout hébergeur
+compatible Next.js.
 
 ## Démarrer en local
 
@@ -30,147 +49,145 @@ npm run dev
 # http://localhost:3000
 ```
 
-Build de prod :
+Validation:
 
 ```bash
+npm run typecheck
 npm run build
-npm start
 ```
 
-## Déployer sur Vercel
+## Ajouter une ressource
 
-### Option 1 — UI Vercel (le plus simple)
+Les ressources sont regroupées par catégorie dans `lib/resources.ts`.
 
-1. Push ce repo sur GitHub / GitLab / Bitbucket.
-2. Sur [vercel.com/new](https://vercel.com/new), importez le repo.
-3. Vercel détecte Next.js automatiquement (framework + build commands).
-4. Cliquez **Deploy**. Aucune variable d'env nécessaire — tout est statique.
+Chaque entrée doit fournir:
 
-### Option 2 — CLI Vercel
+- `title`, `publisher`, `url`, `date`
+- `kind`: `engineering`, `docs`, `research`, `report`, `product`,
+  `case-study` ou `community`
+- `sourceType`: `primary`, `independent` ou `community`
+- `freshness`: `recent`, `durable` ou `historical`
+- `tags`
+- `synthesis`
+- `seniorTakeaway`
+- `useWhen`
 
-```bash
-npm i -g vercel
-vercel
-# Suivre les prompts ; aucune env var requise
-vercel --prod
-```
+Règles éditoriales:
 
-Le build est entièrement statique (pas d'API runtime, pas de DB). Le déploiement est gratuit en plan Hobby, instantané (les pages sont prerenderisées via `generateStaticParams`).
+- Préférer les sources récentes pour les outils, prix, pratiques produit et
+  capacités agents.
+- Garder les sources plus anciennes seulement si elles posent un concept durable.
+- Toujours distinguer source vendor, recherche indépendante et communauté.
+- Éviter les tutoriels débutants et les contenus framework-first.
+- Ne pas copier de longs extraits: écrire une synthèse originale et citer la
+  source.
+
+## Importer une veille externe
+
+On peut proposer un repo, un README, un fichier Markdown ou une liste JSON de
+liens comme matière première. L'objectif n'est pas de tout importer, mais de
+transformer une veille large en ressources à fort signal.
+
+Un prompt prêt à donner à Codex, Claude Code ou un autre agent est disponible
+dans `CONTRIBUTING.md`.
+
+Workflow recommandé:
+
+1. Ajouter la source dans `watchSources` (`lib/resources.ts`) avec propriétaire,
+   URL, date d'import, nombre de ressources candidates et stratégie de sélection.
+2. Extraire les liens candidats par script, JSON existant ou lecture du README.
+3. Dédupliquer par URL et écarter les contenus trop juniors, obsolètes,
+   framework-first ou purement marketing.
+4. Mapper les ressources retenues vers les catégories DevIA existantes, ou créer
+   une catégorie seulement si elle apporte un axe durable.
+5. Rédiger `synthesis`, `seniorTakeaway` et `useWhen` en français sans recopier
+   la description d'origine.
+6. Mettre à jour ou créer une spec dans `specs/` si l'import change le modèle
+   métier.
+
+Le premier exemple documenté est
+`specs/002-watch-source-ingestion/`, basé sur `ai-watchtower`: une veille de
+203 ressources dont une sélection courte est intégrée au catalogue.
+
+## Spec Kit
+
+Le projet utilise GitHub Spec Kit pour garder une documentation métier claire.
+
+Artefacts principaux:
+
+- `.specify/memory/constitution.md`
+- `specs/001-open-source-devia-observatory/spec.md`
+- `specs/001-open-source-devia-observatory/plan.md`
+- `specs/001-open-source-devia-observatory/data-model.md`
+- `specs/001-open-source-devia-observatory/contracts/resource-catalog.md`
+- `specs/001-open-source-devia-observatory/tasks.md`
+- `specs/002-watch-source-ingestion/spec.md`
+
+Avant une évolution produit significative:
+
+1. Mettre à jour ou créer une spec dans `specs/`.
+2. Décrire les critères d'acceptation avant l'implémentation.
+3. Relier les tâches au comportement utilisateur.
+4. Mettre à jour README et docs en même temps que le code.
+
+## Architecture
+
+L'application suit une architecture hexagonale pragmatique:
+
+- `core/domain/`: types métier et règles pures.
+- `core/application/`: ports et cas d'usage.
+- `core/infrastructure/`: adaptateurs markdown et catalogue statique.
+- `app/` + `components/`: interface Next.js/React.
+
+Les pages ne doivent pas importer directement les catalogues statiques ou les
+loaders markdown. Elles passent par les cas d'usage exposés par
+`core/infrastructure/container.ts`.
+
+Voir `ARCHITECTURE.md`.
 
 ## Structure
 
-```
-devai/
-├── app/
-│   ├── (reader)/
-│   │   ├── layout.tsx              # Sidebar + main
-│   │   ├── page.tsx                # Accueil (liste modules)
-│   │   ├── m/[slug]/page.tsx       # Lecteur de module
-│   │   ├── diagrammes/page.tsx     # Diagrammes React Flow
-│   │   └── parcours/               # Suivi de progression (client)
-│   ├── globals.css
-│   ├── layout.tsx                  # Root layout + ThemeProvider
-│   └── not-found.tsx
-├── components/
-│   ├── sidebar.tsx
-│   ├── markdown.tsx                # Renderer principal
-│   ├── mermaid.tsx                 # Mermaid client component
-│   ├── code-block.tsx
-│   ├── toc.tsx                     # TOC + scroll-spy
-│   ├── theme-toggle.tsx
-│   ├── theme-provider.tsx
-│   ├── progress-button.tsx
-│   ├── module-nav.tsx              # Prev/next navigation
-│   └── diagrams/
-│       ├── flow-base.tsx           # Wrapper React Flow + nodes typed
-│       ├── multi-agent.tsx
-│       ├── rag-pipeline.tsx
-│       ├── vercel-stack.tsx
-│       ├── repo-architecture.tsx
-│       ├── agent-decision.tsx
-│       └── cost-stack.tsx
-├── lib/
-│   ├── modules.ts                  # Charge content/*.md
-│   ├── highlight.ts                # Shiki highlighter
-│   └── utils.ts
-├── content/
-│   ├── 00-etat-de-lart-2026.md
-│   ├── 01-nextjs-vercel-prod.md
-│   ├── ...
-│   └── annexes-sources.md
-├── next.config.ts
-├── tailwind.config.ts
-├── tsconfig.json
-├── vercel.json
-└── package.json
+```text
+app/
+  (reader)/
+    page.tsx                  # Observatoire et explorateur de ressources
+    m/[slug]/page.tsx          # Lecteur des dossiers internes
+components/
+  resource/resource-explorer.tsx
+  sidebar.tsx
+content/
+  *.md                         # Dossiers internes
+lib/
+  modules.ts                   # Chargement des dossiers markdown
+  resources.ts                 # Catalogue de veille
+core/
+  domain/                      # Entités et règles pures
+  application/                 # Ports et cas d'usage
+  infrastructure/              # Adapters statiques/markdown
+specs/
+  001-open-source-devia-observatory/
 ```
 
-## Modifier le contenu
+## Licence
 
-Tous les modules sont dans `content/*.md`. Modifiez-les directement, le rendu se met à jour au refresh (en dev).
+MIT. Voir `LICENSE`.
 
-Pour ajouter un module :
-1. Créez `content/<numero>-<slug>.md`.
-2. Ajoutez l'entrée dans `MODULE_DEFS` de `lib/modules.ts`.
-3. Le module apparaît automatiquement dans la sidebar et l'index.
+## Contribution
 
-### Mermaid
+Les contributions sont bienvenues si elles respectent l'intention du projet:
+veille moderne, senior-first, framework-agnostic, sources traçables. Une bonne
+PR ajoute peu de bruit, beaucoup de signal, et explique pourquoi une ressource
+change réellement la pratique du développement logiciel avec l'IA.
 
-```` 
-```mermaid
-flowchart LR
-  A[Étape 1] --> B[Étape 2]
-```
-````
+Pour contribuer avec un agent de code:
 
-Le rendu Mermaid est client-side (lazy loaded) et s'adapte au thème dark/light.
+1. Lire `CONTRIBUTING.md`.
+2. Donner le prompt fourni à Codex, Claude Code, Cursor ou équivalent.
+3. Remplacer `<URL_TO_ANALYZE>` par un article, un repo ou une veille externe.
+4. Relire le diff généré.
+5. Ouvrir une PR avec le template GitHub du projet.
 
-### Code highlighting
-
-```` 
-```typescript
-const x: number = 42;
-```
-````
-
-Highlight Shiki avec le thème `github-dark-default` / `github-light-default`. Bouton copier au hover.
-
-### Liens internes vers d'autres modules
-
-Dans un fichier MD, utilisez `[texte](./05-rag-moderne.md)` ou `[texte](/m/05-rag-moderne)`. Le renderer convertit automatiquement les liens `./xx.md` vers les routes `/m/xx`.
-
-### Liens vers des diagrammes React Flow
-
-Pointez sur `/diagrammes#<anchor>`, par exemple :
-
-- `/diagrammes#vercel-stack`
-- `/diagrammes#multi-agent`
-- `/diagrammes#rag-pipeline`
-- `/diagrammes#cost-stack`
-- `/diagrammes#repo-architecture`
-- `/diagrammes#agent-decision`
-
-## Personnaliser
-
-- **Couleurs / theme** : variables CSS dans `app/globals.css` (`--accent`, `--bg`, `--fg`, etc.).
-- **Polices** : changez `Inter` / `JetBrains_Mono` dans `app/layout.tsx`.
-- **Logo / titre** : `components/sidebar.tsx`.
-- **Modules** : ordre et hooks dans `lib/modules.ts` (`MODULE_DEFS`).
-
-## Pas de tracking, pas de compte
-
-La progression est sauvée dans `localStorage` (`devai:progress`). Aucun cookie tiers, aucune analytics par défaut. Si vous voulez tracker l'usage :
-
-- Ajoutez Vercel Analytics : `npm i @vercel/analytics` puis `<Analytics />` dans `app/layout.tsx`.
-- Ou Plausible / Umami / Fathom selon préférence.
-
-## Licence du contenu
-
-Le contenu (`content/*.md`) est compilé à partir de sources publiques citées dans `content/annexes-sources.md`. Reproduction libre pour usage personnel et formation interne. Citations obligatoires pour reproduction publique.
-
-## Crédits techniques
-
-- shadcn/ui pour les patterns de composants
-- Vercel pour Next.js, React Flow team pour `@xyflow/react`
-- Mermaid, Shiki, react-markdown
-- Phosphor Icons
+Les PR qui modifient `lib/resources.ts` sont automatiquement relues par la
+GitHub Action `Contribution Scope`: si une contribution de veille touche aussi
+l'UI, l'architecture, les fichiers package, les scripts ou les workflows, elle
+remonte un warning non bloquant pour aider la revue humaine.
