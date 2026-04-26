@@ -54,6 +54,11 @@ const MODULE_DEFS: Array<{ file: string; number: string; hook: string }> = [
     number: "12",
     hook: "Coordination multi-dev : AGENTS.md partagé, gates, eval engineer, onboarding, anti-patterns équipe.",
   },
+  {
+    file: "13-rag-local-postgres.md",
+    number: "13",
+    hook: "Vectoriser la documentation métier dans Postgres local : quand ça marche, preuves, limites, architecture RAG hybride.",
+  },
 ];
 
 function fileToSlug(file: string) {
