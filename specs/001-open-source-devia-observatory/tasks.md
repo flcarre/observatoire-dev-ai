@@ -48,17 +48,20 @@ the home page.
 
 ## Phase 4: User Story 2 - Relier la veille aux dossiers internes utiles (Priority: P2)
 
-**Goal**: Keep valuable existing content while reframing it as dossiers.
+**Goal**: Keep valuable existing content while reframing it as articles de fond.
 
 **Independent Test**: User can navigate from atlas categories to existing
-dossiers and sidebar labels match the new framing.
+long-form articles and sidebar labels match the new framing.
 
 - [x] T010 [US2] Rename module navigation framing in `components/sidebar.tsx`
 - [x] T011 [US2] Reframe module metadata from course modules to dossiers in `lib/modules.ts`
 - [x] T012 [US2] Update reader page labels in `app/(reader)/m/[slug]/page.tsx`
 - [x] T013 [US2] Remove reader progress/parcours tracking from the public platform
+- [x] T025 [US1] Add dedicated Watchtower route in `app/(reader)/watchtower/page.tsx`
+- [x] T026 [US2] Add all long-form articles route in `app/(reader)/dossiers/page.tsx`
+- [x] T027 [US2] Remove hard-coded featured dossier filtering from sidebar navigation
 
-**Checkpoint**: Old content is accessible as dossiers, not mandatory training.
+**Checkpoint**: Old content is accessible as articles de fond, not mandatory training.
 
 ---
 

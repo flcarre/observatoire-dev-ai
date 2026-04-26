@@ -58,6 +58,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "The golden rules of agent-first product engineering",
         publisher: "PostHog",
+        author: "PostHog",
         url: "https://posthog.com/newsletter/agent-first-product-engineering",
         date: "2026-04-08",
         kind: "engineering",
@@ -74,6 +75,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "What is a product engineer?",
         publisher: "PostHog",
+        author: "PostHog",
         url: "https://posthog.com/product-engineer/what-is-a-product-engineer",
         date: "rolling",
         kind: "docs",
@@ -90,6 +92,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "AI Codebase Maturity Model",
         publisher: "arXiv",
+        author: "arXiv",
         url: "https://arxiv.org/abs/2604.09388",
         date: "2026-04",
         kind: "research",
@@ -106,6 +109,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Everything I Learned About Harness Engineering and AI Factories in San Francisco",
         publisher: "Escape",
+        author: "Escape",
         url: "https://escape.tech/blog/everything-i-learned-about-harness-engineering-and-ai-factories-in-san-francisco-april-2026/",
         date: "2026-04-03",
         kind: "case-study",
@@ -122,6 +126,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "The Post-Developer Era",
         publisher: "Josh W. Comeau",
+        author: "Josh W. Comeau",
         url: "https://www.joshwcomeau.com/blog/the-post-developer-era/",
         date: "2025",
         kind: "community",
@@ -149,6 +154,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Effective context engineering for AI agents",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
         date: "2025-09-29",
         kind: "engineering",
@@ -165,6 +171,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Best Practices for Claude Code",
         publisher: "Anthropic / Claude Code Docs",
+        author: "Anthropic",
         url: "https://code.claude.com/docs/en/best-practices",
         date: "rolling",
         kind: "docs",
@@ -181,6 +188,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Equipping agents for the real world with Agent Skills",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
         date: "2025-10-16",
         kind: "engineering",
@@ -197,6 +205,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Code execution with MCP: Building more efficient agents",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/code-execution-with-mcp",
         date: "2025-11-04",
         kind: "engineering",
@@ -213,6 +222,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Fast regex search: indexing text for agent tools",
         publisher: "Cursor",
+        author: "Cursor",
         url: "https://cursor.com/blog/fast-regex-search",
         date: "2026-03-23",
         kind: "engineering",
@@ -229,6 +239,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Knowledge Priming",
         publisher: "Martin Fowler",
+        author: "Martin Fowler",
         url: "https://martinfowler.com/articles/reduce-friction-ai/knowledge-priming.html",
         date: "2025",
         kind: "engineering",
@@ -245,6 +256,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Spec-Driven Development: Tools",
         publisher: "Martin Fowler",
+        author: "Martin Fowler",
         url: "https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html",
         date: "2026",
         kind: "engineering",
@@ -272,6 +284,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Harness engineering: leveraging Codex in an agent-first world",
         publisher: "OpenAI Engineering",
+        author: "OpenAI",
         url: "https://openai.com/index/harness-engineering/",
         date: "2026-02-11",
         kind: "engineering",
@@ -288,6 +301,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Introducing the Codex app",
         publisher: "OpenAI",
+        author: "OpenAI",
         url: "https://openai.com/index/introducing-the-codex-app/",
         date: "2026-02-02",
         kind: "product",
@@ -304,6 +318,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Codex for (almost) everything",
         publisher: "OpenAI",
+        author: "OpenAI",
         url: "https://openai.com/index/codex-for-almost-everything/",
         date: "2026-04-16",
         kind: "product",
@@ -320,6 +335,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "The third era of AI software development",
         publisher: "Cursor",
+        author: "Cursor",
         url: "https://cursor.com/blog/third-era",
         date: "2026-02-26",
         kind: "engineering",
@@ -336,6 +352,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Run cloud agents in your own infrastructure",
         publisher: "Cursor",
+        author: "Cursor",
         url: "https://cursor.com/blog/self-hosted-cloud-agents",
         date: "2026-03-25",
         kind: "product",
@@ -352,6 +369,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Background Agents",
         publisher: "Cursor Docs",
+        author: "Cursor",
         url: "https://docs.cursor.com/en/background-agents",
         date: "rolling",
         kind: "docs",
@@ -368,6 +386,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Building Effective Agents",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/building-effective-agents",
         date: "2024-12-19",
         kind: "engineering",
@@ -384,6 +403,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Agentic SDLC Handbook",
         publisher: "Daniel Meppiel",
+        author: "Daniel Meppiel",
         url: "https://danielmeppiel.github.io/agentic-sdlc-handbook/",
         date: "rolling",
         kind: "community",
@@ -411,6 +431,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Agent Interaction Guidelines",
         publisher: "Linear Developers",
+        author: "Linear",
         url: "https://linear.app/developers/aig",
         date: "rolling",
         kind: "docs",
@@ -427,6 +448,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "How we use Linear Agent at Linear",
         publisher: "Linear",
+        author: "Linear",
         url: "https://linear.app/now/how-we-use-linear-agent-at-linear",
         date: "2026-04-10",
         kind: "case-study",
@@ -443,6 +465,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "AI Agents in Linear",
         publisher: "Linear Docs",
+        author: "Linear",
         url: "https://linear.app/docs/agents-in-linear",
         date: "rolling",
         kind: "docs",
@@ -459,6 +482,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Introducing Linear Agent",
         publisher: "Linear Changelog",
+        author: "Linear",
         url: "https://linear.app/changelog/2026-03-24-introducing-linear-agent",
         date: "2026-03-24",
         kind: "product",
@@ -475,6 +499,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Linear for Agents",
         publisher: "Linear Changelog",
+        author: "Linear",
         url: "https://linear.app/changelog/2025-05-20-linear-for-agents",
         date: "2025-05-20",
         kind: "product",
@@ -502,6 +527,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "How we compare model quality in Cursor",
         publisher: "Cursor",
+        author: "Cursor",
         url: "https://cursor.com/blog/cursorbench",
         date: "2026-03-11",
         kind: "engineering",
@@ -518,6 +544,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Demystifying evals for AI agents",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
         date: "2026-01-09",
         kind: "engineering",
@@ -534,6 +561,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Quantifying infrastructure noise in agentic coding evals",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/infrastructure-noise",
         date: "2026-02-05",
         kind: "engineering",
@@ -550,6 +578,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Copilot coding agent validates code security and quality",
         publisher: "GitHub Changelog",
+        author: "GitHub",
         url: "https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-automatically-validates-code-security-and-quality/",
         date: "2025-10-28",
         kind: "product",
@@ -566,6 +595,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Where Do AI Coding Agents Fail?",
         publisher: "arXiv / MSR 2026",
+        author: "arXiv",
         url: "https://arxiv.org/abs/2601.15195",
         date: "2026-01-21",
         kind: "research",
@@ -593,6 +623,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Effective harnesses for long-running agents",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
         date: "2025-11-26",
         kind: "engineering",
@@ -609,6 +640,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Building a C compiler with a team of parallel Claudes",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/building-c-compiler",
         date: "2026-02-05",
         kind: "engineering",
@@ -625,6 +657,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "How we built our multi-agent research system",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/multi-agent-research-system",
         date: "2025-06-13",
         kind: "engineering",
@@ -641,6 +674,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Multi-Agents: What's Actually Working",
         publisher: "Cognition",
+        author: "Cognition",
         url: "https://cognition.ai/",
         date: "2026-04-22",
         kind: "engineering",
@@ -657,6 +691,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Spec Kit Agents: Context-Grounded Agentic Workflows",
         publisher: "arXiv",
+        author: "arXiv",
         url: "https://arxiv.org/abs/2604.05278",
         date: "2026-04-07",
         kind: "research",
@@ -684,6 +719,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "AI Agent Observability",
         publisher: "Weights & Biases",
+        author: "Weights & Biases",
         url: "https://wandb.ai/site/articles/ai-agent-observability/",
         date: "2025",
         kind: "engineering",
@@ -700,6 +736,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Langfuse",
         publisher: "Langfuse",
+        author: "Langfuse",
         url: "https://langfuse.com/",
         date: "rolling",
         kind: "product",
@@ -716,6 +753,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Entire",
         publisher: "Entire",
+        author: "Entire",
         url: "https://entire.io/",
         date: "rolling",
         kind: "product",
@@ -743,6 +781,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "MCP is Dead, Long Live the CLI",
         publisher: "Eric Holmes",
+        author: "Eric Holmes",
         url: "https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html",
         date: "2026-02-28",
         kind: "community",
@@ -759,6 +798,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "RTK",
         publisher: "rtk-ai",
+        author: "rtk-ai",
         url: "https://github.com/rtk-ai/rtk",
         date: "rolling",
         kind: "community",
@@ -775,6 +815,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Serena",
         publisher: "oraios",
+        author: "oraios",
         url: "https://github.com/oraios/serena",
         date: "rolling",
         kind: "community",
@@ -802,6 +843,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Codex is now generally available",
         publisher: "OpenAI",
+        author: "OpenAI",
         url: "https://openai.com/index/codex-now-generally-available/",
         date: "2025-10-06",
         kind: "product",
@@ -818,6 +860,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "How OpenAI uses Codex",
         publisher: "OpenAI",
+        author: "OpenAI",
         url: "https://cdn.openai.com/pdf/6a2631dc-783e-479b-b1a4-af0cfbd38630/how-openai-uses-codex.pdf",
         date: "2025",
         kind: "case-study",
@@ -834,6 +877,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "About GitHub Copilot coding agent",
         publisher: "GitHub Docs",
+        author: "GitHub",
         url: "https://docs.github.com/copilot/concepts/coding-agent/about-copilot-coding-agent",
         date: "rolling",
         kind: "docs",
@@ -850,6 +894,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "A new era for Sourcegraph",
         publisher: "Sourcegraph",
+        author: "Sourcegraph",
         url: "https://sourcegraph.com/blog/a-new-era-for-sourcegraph-the-intelligence-layer-for-ai-coding-agents-and-developers",
         date: "2026-02-25",
         kind: "product",
@@ -866,6 +911,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "What it actually takes to run code intelligence in-house",
         publisher: "Sourcegraph",
+        author: "Sourcegraph",
         url: "https://sourcegraph.com/blog/what-it-actually-takes-to-run-code-intelligence-in-house",
         date: "2026-04-21",
         kind: "engineering",
@@ -893,6 +939,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Beyond permission prompts: making Claude Code more secure and autonomous",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/claude-code-sandboxing",
         date: "2025-10-20",
         kind: "engineering",
@@ -909,6 +956,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Claude Code auto mode",
         publisher: "Anthropic Engineering",
+        author: "Anthropic",
         url: "https://www.anthropic.com/engineering/claude-code-auto-mode",
         date: "2026-03-25",
         kind: "product",
@@ -925,6 +973,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Addendum to GPT-5 system card: GPT-5-Codex",
         publisher: "OpenAI",
+        author: "OpenAI",
         url: "https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf",
         date: "2025-09-15",
         kind: "report",
@@ -941,6 +990,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Claude Code product page",
         publisher: "Anthropic",
+        author: "Anthropic",
         url: "https://www.anthropic.com/product/claude-code",
         date: "rolling",
         kind: "product",
@@ -957,6 +1007,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Constitutional Spec-Driven Development",
         publisher: "arXiv",
+        author: "arXiv",
         url: "https://arxiv.org/abs/2602.02584",
         date: "2026-01-31",
         kind: "research",
@@ -973,6 +1024,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "OWASP Top 10 for Large Language Model Applications",
         publisher: "OWASP",
+        author: "OWASP",
         url: "https://genai.owasp.org/llm-top-10/",
         date: "rolling",
         kind: "docs",
@@ -1000,6 +1052,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "State of AI-assisted Software Development 2025",
         publisher: "DORA / Google Cloud",
+        author: "DORA / Google Cloud",
         url: "https://dora.dev/research/2025/dora-report/",
         date: "2025",
         kind: "report",
@@ -1016,6 +1069,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Octoverse 2025",
         publisher: "GitHub Blog",
+        author: "GitHub",
         url: "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/",
         date: "2025-10",
         kind: "report",
@@ -1032,6 +1086,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Scaling Codex to enterprises worldwide",
         publisher: "OpenAI",
+        author: "OpenAI",
         url: "https://openai.com/index/scaling-codex-to-enterprises-worldwide/",
         date: "2026-04-21",
         kind: "product",
@@ -1048,6 +1103,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Stack Overflow Developer Survey 2025",
         publisher: "Stack Overflow",
+        author: "Stack Overflow",
         url: "https://survey.stackoverflow.co/2025",
         date: "2025",
         kind: "report",
@@ -1064,6 +1120,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "We are Changing our Developer Productivity Experiment Design",
         publisher: "METR",
+        author: "METR",
         url: "https://metr.org/blog/2026-02-24-uplift-update/",
         date: "2026-02-24",
         kind: "research",
@@ -1091,6 +1148,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
         publisher: "METR",
+        author: "METR",
         url: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
         date: "2025-07-10",
         kind: "research",
@@ -1107,6 +1165,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "AIDev: Studying AI Coding Agents on GitHub",
         publisher: "arXiv",
+        author: "arXiv",
         url: "https://arxiv.org/abs/2602.09185",
         date: "2026-02",
         kind: "research",
@@ -1123,6 +1182,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "How AI Coding Agents Modify Code",
         publisher: "arXiv / MSR 2026",
+        author: "arXiv",
         url: "https://arxiv.org/abs/2601.17581",
         date: "2026-01",
         kind: "research",
@@ -1139,6 +1199,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "AgenticFlict",
         publisher: "arXiv",
+        author: "arXiv",
         url: "https://arxiv.org/abs/2604.03551",
         date: "2026-04-04",
         kind: "research",
@@ -1155,6 +1216,7 @@ export const resourceCategories: ResourceCategory[] = [
       {
         title: "Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants",
         publisher: "OpenReview / AIWare 2026",
+        author: "OpenReview",
         url: "https://openreview.net/pdf?id=bw5mNj75h9",
         date: "2026",
         kind: "research",

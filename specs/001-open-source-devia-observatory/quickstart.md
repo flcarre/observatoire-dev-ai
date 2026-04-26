@@ -17,15 +17,18 @@ Open `http://localhost:3000`.
 
 ## 3. Validate filtering
 
+- Open `/watchtower`.
 - Search for `context`.
 - Select a category such as "Context engineering".
 - Confirm visible cards update without a page reload.
 
-## 4. Validate dossiers
+## 4. Validate articles de fond
 
-- Open a related internal dossier from a category.
-- Confirm the reader still works and sidebar labels use "Dossiers" rather than
-  "Modules".
+- Open `/dossiers`.
+- Confirm every internal long-form article exposed by the repository is listed.
+- Open a related internal article from a Watchtower category.
+- Confirm the reader still works and sidebar labels use "Articles de fond"
+  rather than "Modules".
 
 ## 5. Validate open source docs
 

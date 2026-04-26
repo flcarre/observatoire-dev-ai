@@ -37,6 +37,7 @@ export function createObservatoryUseCases({
         resourceItems: indexedResources.map((resource) => ({
           title: resource.title,
           publisher: resource.publisher,
+          author: resource.author,
           categoryTitle: resource.categoryTitle,
           categoryId: resource.categoryId,
           anchorId: resource.anchorId,

@@ -34,24 +34,13 @@ type CategoryEntry = {
 type ResourceEntry = {
   title: string;
   publisher: string;
+  author: string;
   categoryTitle: string;
   categoryId: string;
   anchorId: string;
   synthesis: string;
   tags: string[];
 };
-
-const FEATURED_DOSSIERS = new Set([
-  "00-etat-de-lart-2026",
-  "03-workflow-agents-dev",
-  "04-multi-agents-prod",
-  "05-rag-moderne",
-  "06-evals-observability",
-  "07-cout-securite-perf",
-  "10-roadmap-personnelle",
-  "11-context-engineering",
-  "12-process-equipe-genai",
-]);
 
 export function Sidebar({
   modules,
@@ -66,7 +55,6 @@ export function Sidebar({
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
 
-  const visibleDossiers = modules.filter((module) => FEATURED_DOSSIERS.has(module.slug));
   const normalizedQuery = query.trim().toLowerCase();
   const searchResults = useMemo(() => {
     if (normalizedQuery.length < 2) return [];
@@ -76,6 +64,7 @@ export function Sidebar({
         [
           resource.title,
           resource.publisher,
+          resource.author,
           resource.categoryTitle,
           resource.synthesis,
           ...resource.tags,
@@ -89,24 +78,24 @@ export function Sidebar({
         id: `resource-${resource.anchorId}`,
         type: "Ressource",
         title: resource.title,
-        eyebrow: `${resource.publisher} · ${resource.categoryTitle}`,
-        href: `/#${resource.anchorId}`,
+        eyebrow: `${resource.author} · ${resource.publisher} · ${resource.categoryTitle}`,
+        href: `/watchtower#${resource.anchorId}`,
       }));
 
-    const dossierResults = modules
+    const articleResults = modules
       .filter((module) =>
         [module.title, module.hook, module.slug].join(" ").toLowerCase().includes(normalizedQuery),
       )
       .slice(0, 4)
       .map((module) => ({
-        id: `dossier-${module.slug}`,
-        type: "Dossier",
+        id: `article-${module.slug}`,
+        type: "Article",
         title: module.title,
         eyebrow: module.hook,
         href: `/m/${module.slug}`,
       }));
 
-    return [...resourceResults, ...dossierResults].slice(0, 10);
+    return [...resourceResults, ...articleResults].slice(0, 10);
   }, [modules, normalizedQuery, resources]);
 
   const closeSearch = () => {
@@ -159,7 +148,7 @@ export function Sidebar({
                 <input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Rechercher une ressource..."
+                  placeholder="Rechercher ressource ou article..."
                   className="h-10 w-full border border-border bg-card pl-9 pr-8 text-sm outline-none transition placeholder:text-muted-fg focus:border-accent"
                 />
                 {query && (
@@ -200,7 +189,7 @@ export function Sidebar({
                     </div>
                   ) : (
                     <div className="px-3 py-4 text-xs leading-5 text-muted-fg">
-                      Aucun article ou dossier trouve.
+                      Aucun article ou ressource trouve.
                     </div>
                   )}
                 </div>
@@ -209,6 +198,20 @@ export function Sidebar({
 
             <NavLink href="/" icon={<House size={14} />} active={pathname === "/"}>
               Observatoire
+            </NavLink>
+            <NavLink
+              href="/watchtower"
+              icon={<Binoculars size={14} />}
+              active={pathname === "/watchtower"}
+            >
+              Watchtower
+            </NavLink>
+            <NavLink
+              href="/dossiers"
+              icon={<Books size={14} />}
+              active={pathname === "/dossiers"}
+            >
+              Articles de fond
             </NavLink>
             <NavLink href="/#contribuer" icon={<GitPullRequest size={14} />} active={false}>
               How to contribute
@@ -222,7 +225,7 @@ export function Sidebar({
               {categories.map((category) => (
                 <li key={category.id}>
                   <Link
-                    href={`/#${category.id}`}
+                    href={`/watchtower#${category.id}`}
                     className="flex items-start gap-2 rounded px-3 py-2 text-sm text-muted-fg transition hover:bg-muted/50 hover:text-fg"
                   >
                     <span className="mt-0.5 inline-flex h-5 w-7 shrink-0 items-center justify-center rounded bg-muted text-[10px] font-mono font-semibold text-muted-fg tabular-nums">
@@ -240,11 +243,11 @@ export function Sidebar({
             </ul>
 
             <div className="mt-4 mb-1 px-3 text-[10px] font-semibold uppercase tracking-wider text-muted-fg">
-              Dossiers de fond
+              Articles de fond
             </div>
 
             <ul className="space-y-0.5">
-              {visibleDossiers.map((m) => {
+              {modules.map((m) => {
                 const isActive = pathname === `/m/${m.slug}`;
                 return (
                   <li key={m.slug}>
@@ -281,11 +284,11 @@ export function Sidebar({
               <ThemeToggle />
             </div>
             <Link
-              href="/"
+              href="/watchtower"
               className="flex items-center gap-2 border border-border px-3 py-2 text-xs text-muted-fg transition hover:border-accent hover:text-fg"
             >
               <Binoculars size={14} />
-              Veille principale
+              Ouvrir la Watchtower
               <FolderOpen size={14} className="ml-auto" />
             </Link>
           </div>

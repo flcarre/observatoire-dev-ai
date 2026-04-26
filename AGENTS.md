@@ -47,8 +47,13 @@ When adding a resource:
   explain why each retained source matters.
 - Write summaries in French.
 - Keep summaries original. Do not copy long source excerpts.
-- Always include `title`, `publisher`, `url`, `date`, `kind`, `sourceType`,
-  `freshness`, `tags`, `synthesis`, `seniorTakeaway`, and `useWhen`.
+- Always include `title`, `publisher`, `author`, `url`, `date`, `kind`,
+  `sourceType`, `freshness`, `tags`, `synthesis`, `seniorTakeaway`, and
+  `useWhen`.
+- Use `author` as the canonical "who wrote it" filter value. It can be a
+  company, lab, standards body, individual author or tech influencer; normalize
+  product/blog variants to the same author when useful, for example
+  "Anthropic Engineering" and "Anthropic / Claude Code Docs" -> "Anthropic".
 - Make `seniorTakeaway` practical: what changes in architecture, review,
   delivery, process or judgment.
 - Make `useWhen` concrete: when a team should read or apply the resource.

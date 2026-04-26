@@ -46,5 +46,9 @@ The final resource is the existing `Resource` type from
 
 Additional editorial rule:
 
+- If a resource is selected from a watch source, `author` MUST identify the
+  canonical writer behind the resource: company, lab, standards body,
+  individual author or tech influencer. Normalize publisher variants to the
+  same author when useful.
 - If a resource is selected from a watch source, its tags SHOULD make the
   topical mapping clear, not merely copy the source category.
