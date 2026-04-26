@@ -19,7 +19,7 @@ Votre journée standard, en avril 2026 :
 
 ### Avant le code
 
-- `claude --resume` (ou `--continue`) pour reprendre la session de la veille.
+- `claude --résumé` (ou `--continue`) pour reprendre la session de la veille.
 - Vérifier les notifications des agents background (Cursor cloud, Trigger.dev runs nightly).
 - Skim les PRs de CodeRabbit/Greptile sur les agents-PR ouverts overnight.
 
@@ -46,7 +46,7 @@ flowchart TD
 
 - **Kitchen sink session** : ne pas faire 5 tâches non liées dans la même session. Failures compoundent.
 - **Pas de plan mode** sur des changes multi-fichiers : 90 % du temps perdu sur des patches IA.
-- **Pas de verification primitive** : pas de tests, pas de screenshots — vous *êtes* la feedback loop unique.
+- **Pas de vérification primitive** : pas de tests, pas de screenshots — vous *êtes* la feedback loop unique.
 - **Override permission de manière reflex** : un classifier auto mode catch les vraies escalations ; ne tapez pas "y" en autopilote.
 - **Ne pas `/clear` entre tâches** : pollution context.
 
@@ -54,7 +54,7 @@ flowchart TD
 
 | Situation | Approche | Pourquoi |
 |---|---|---|
-| Bug fix descriptible en 1 phrase | Vous-même | L'overhead de plan + exécution dépasse le coût |
+| Bug fix descriptible en 1 phrase | Vous-même | L'overhead de plan + exécution dépassé le coût |
 | Code crypto / auth / billing | Vous-même + tests intégration | Coût d'hallucination unacceptable |
 | Performance work nécessitant intuition | Vous-même | Le model n'a pas votre contexte produit |
 | Langage où vous battez le model | Vous-même | Faites confiance à votre expertise |
@@ -78,13 +78,13 @@ flowchart TD
 - Adopter plan mode systématiquement sur les PRs multi-fichiers.
 - **Cible mois 1** : 50 % de vos PRs passent par plan mode + agent ; vous mesurez le delta de qualité (PRs reviewées, bugs trouvés).
 
-### Mois 2 — Choix d'outils et cas d'usage reels
+### Mois 2 — Choix d'outils et cas d'usage réels
 
-- Comparer Codex, Claude Code, Cursor, Copilot coding agent et un outil local/open source sur le meme vrai ticket.
-- Construire une matrice de cas d'usage : comprehension de code, refactor, migration, tests, review, docs, investigation incident.
-- Standardiser les criteres de choix : securite, droits, audit trail, integration Git, cout, latence, qualite de review.
-- Documenter les conditions d'usage dans `AGENTS.md` ou une doc d'equipe agnostique.
-- **Cible mois 2** : vous avez 3 cas d'usage repetables, mesures et expliques a l'equipe.
+- Comparer Codex, Claude Code, Cursor, Copilot coding agent et un outil local/open source sur le même vrai ticket.
+- Construire une matrice de cas d'usage : compréhension de code, refactor, migration, tests, review, docs, investigation incident.
+- Standardiser les criteres de choix : sécurité, droits, audit trail, intégration Git, coût, latence, qualité de review.
+- Documenter les conditions d'usage dans `AGENTS.md` ou une doc d'équipe agnostique.
+- **Cible mois 2** : vous avez 3 cas d'usage répétables, mesurés et expliqués à l'équipe.
 
 ### Mois 3 — Evals et observabilité
 
@@ -113,7 +113,7 @@ flowchart TD
 
 - Écrire un AGENTS.md, une skill, et un subagent pour l'org (pas juste pour vous).
 - Mentor sur plan mode, hooks, evals.
-- Construire un MCP interne pour votre boite (codebase context, ticketing, etc.).
+- Construire un MCP interne pour votre boîte (codebase context, ticketing, etc.).
 - Lire les blogs eng Anthropic / Vercel / Cursor en continue ; maintenir une veille active.
 - **Cible mois 6** : vous êtes la personne dans l'équipe qui sait répondre aux questions IA-architecture ; les juniors viennent vous voir pour designer leurs systèmes IA.
 
@@ -127,7 +127,7 @@ flowchart TD
 
 ### Qualité
 
-- **Bugs reportés / 100 PRs** : doit *baisser* avec adoption agent + verification.
+- **Bugs reportés / 100 PRs** : doit *baisser* avec adoption agent + vérification.
 - **Régressions de prompt** : doit être 0 en prod si vous avez les eval gates.
 - **Coverage AI features** : combien de votre code IA est sous test/eval ?
 
@@ -182,7 +182,7 @@ flowchart TD
 
 ### Read once, apply ten times
 
-Lire passivement n'a presque pas d'effet. Convertissez chaque article eng pertinent en 1 application concrete dans votre code.
+Lire passivement n'a presque pas d'effet. Convertissez chaque article eng pertinent en 1 application concrète dans votre code.
 
 ### Build it twice
 
@@ -190,7 +190,7 @@ La première fois, vous découvrez la complexité. La deuxième fois, vous shipe
 
 ### Mesurer, toujours
 
-Si vous changez de modèle, vous devez avoir une baseline d'évals. Si vous ajoutez du caching, vous devez mesurer le cache hit rate. Si vous adoptez plan mode, vous devez mesurer le delta qualité PR. La perception est trompeuse.
+Si vous changez de modèle, vous devez avoir une baseline d'évals. Si vous ajoutez du caching, vous devez mesurer le caché hit rate. Si vous adoptez plan mode, vous devez mesurer le delta qualité PR. La perception est trompeuse.
 
 ### Lire les failures plus que les successes
 
@@ -198,10 +198,10 @@ Les success stories en blog post sont choisies. Les post-mortems et les traces d
 
 ## 8. Ce qu'il faut désapprendre
 
-- **TDD strict avant code** : la TAG (tests after generation) avec mutation gate est devenue le bon pattern pour les agents.
-- **Comments comme documentation** : votre AGENTS.md / skills sont la doc ; le code se documente avec des noms et types.
+- **TDD strict avant code** : la TAG (tests after génération) avec mutation gate est devenue le bon pattern pour les agents.
+- **Comments comme documentation** : votre AGENTS.md / skills sont la doc ; le code se documente avec des noms et typés.
 - **Préférer le simple au scalable** : avec les agents, "scalable" est *parfois* plus simple à shippé qu'un quick hack qui devra être migré.
-- **Tout coder soi-même par fierté** : vous êtes payé pour ship value, pas pour taper des touches.
+- **Tout coder soi-même par fierté** : vous êtes payé pour ship value, pas pour taper des touchés.
 - **Ne pas mesurer parce que "ça marche"** : sans evals, vos régressions arrivent en prod.
 
 ## 9. Pièges à éviter

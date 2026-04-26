@@ -26,8 +26,8 @@ export default async function DossiersPage() {
                 Articles de fond
               </h1>
               <p className="mt-3 max-w-3xl text-base leading-7 text-muted-fg">
-                Les anciens modules sont conserves comme articles approfondis. Ils servent a
-                comprendre les pratiques, arbitrages et architectures derriere la veille
+                Les anciens modules sont conservés comme articles approfondis. Ils servent à
+                comprendre les pratiques, arbitrages et architectures derrière la veille
                 rapide de la Watchtower.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
@@ -35,7 +35,7 @@ export default async function DossiersPage() {
                   href="/watchtower"
                   className="inline-flex items-center gap-2 bg-accent px-4 py-2 text-sm font-medium text-accent-fg transition hover:opacity-90"
                 >
-                  Retour a la Watchtower
+                  Retour à la Watchtower
                   <Binoculars size={15} />
                 </Link>
                 <a

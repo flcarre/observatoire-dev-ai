@@ -191,7 +191,7 @@ export function Sidebar({
                     </div>
                   ) : (
                     <div className="px-3 py-4 text-xs leading-5 text-muted-fg">
-                      Aucun article ou ressource trouve.
+                      Aucun article ou ressource trouvé.
                     </div>
                   )}
                 </div>

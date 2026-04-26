@@ -3,7 +3,7 @@
 **Feature Branch**: `main`  
 **Created**: 2026-04-26  
 **Status**: Draft  
-**Input**: User example: "Je devrais pouvoir donner un repo comme https://github.com/fdelbrayelle/ai-watchtower et que le projet ajoute les ressources dans les bonnes sections avec des resumes."
+**Input**: User example: "Je devrais pouvoir donner un repo comme https://github.com/fdelbrayelle/ai-watchtower et que le projet ajoute les ressources dans les bonnes sections avec des résumés."
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -12,45 +12,45 @@
 Un mainteneur fournit une source de veille externe, par exemple un README ou un
 repo public contenant des liens. Le projet doit pouvoir en extraire les
 ressources candidates, les rapprocher de la taxonomie existante, puis garder les
-ressources utiles avec une synthese originale et un lien source.
+ressources utiles avec une synthèse originale et un lien source.
 
 **Why this priority**: c'est le mecanisme qui transforme l'observatoire en base
 vivante et collaborative.
 
-**Independent Test**: a partir d'une source publique comme `ai-watchtower`, le
-catalogue affiche des ressources importees, categorisees, avec synthese,
+**Independent Test**: à partir d'une source publique comme `ai-watchtower`, le
+catalogue affiche des ressources importées, catégorisées, avec synthèse,
 takeaway senior, usage conseille et lien original.
 
 **Acceptance Scenarios**:
 
-1. **Given** une source externe riche en liens, **When** elle est analysee,
-   **Then** les ressources candidates sont regroupees par themes existants ou
+1. **Given** une source externe riche en liens, **When** elle est analysée,
+   **Then** les ressources candidates sont regroupées par thèmes existants ou
    nouveaux themes utiles.
 2. **Given** une ressource candidate, **When** elle est retenue, **Then** elle
-   obtient une synthese francaise originale, une source typee et une valeur
+   obtient une synthèse française originale, une source typée et une valeur
    senior explicite, avec un auteur ou une organisation canonique pour le tri.
-3. **Given** une source externe importee, **When** un lecteur consulte
-   l'accueil, **Then** il voit d'ou vient cette veille et peut ouvrir la source
+3. **Given** une source externe importée, **When** un lecteur consulte
+   l'accueil, **Then** il voit d'où vient cette veille et peut ouvrir la source
    d'origine.
 
 ### User Story 2 - Filtrer le bruit d'une veille large (Priority: P2)
 
 Un mainteneur ne veut pas importer automatiquement tout un repo de liens. Les
-ressources doivent etre selectionnees selon l'intention du projet: senior-first,
+ressources doivent être sélectionnées selon l'intention du projet: senior-first,
 framework-agnostic, moderne, pratique pour le travail en entreprise.
 
 **Independent Test**: une veille externe de plus de 100 liens peut produire une
-selection plus courte, traçable et coherent avec les categories du projet.
+sélection plus courte, traçable et cohérente avec les catégories du projet.
 
 ## Edge Cases
 
-- Une source externe peut contenir des liens obsoletes, juniors, vendor-heavy ou
-  tres specifiques a un langage; ils ne doivent pas entrer tels quels.
-- Un meme article peut deja exister dans le catalogue; il doit etre deduplique.
+- Une source externe peut contenir des liens obsolètes, juniors, vendor-heavy ou
+  très spécifiques à un langage; ils ne doivent pas entrer tels quels.
+- Un même article peut déjà exister dans le catalogue; il doit être dédupliqué.
 - Certaines ressources anciennes restent utiles si elles cadrent un concept
   durable, mais la fraicheur doit le signaler.
-- Les descriptions fournies par la source externe ne doivent pas etre recopiees
-  comme syntheses finales sans reecriture editoriale.
+- Les descriptions fournies par la source externe ne doivent pas être recopiées
+  comme synthèses finales sans réécriture éditoriale.
 
 ## Requirements *(mandatory)*
 
