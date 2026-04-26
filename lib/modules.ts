@@ -40,6 +40,11 @@ const MODULE_DEFS: Array<{ file: string; number: string; hook: string }> = [
     hook: "Prompt caching, batch, model routing, context engineering, prompt injection, trust boundaries.",
   },
   {
+    file: "08-rag-local-postgres.md",
+    number: "08",
+    hook: "Vectoriser la documentation métier dans Postgres local : quand ça marche, preuves, limites, architecture RAG hybride.",
+  },
+  {
     file: "10-roadmap-personnelle.md",
     number: "10",
     hook: "Daily loop, quand coder vs déléguer, anti-patterns, métriques perso à tracker.",
@@ -53,11 +58,6 @@ const MODULE_DEFS: Array<{ file: string; number: string; hook: string }> = [
     file: "12-process-equipe-genai.md",
     number: "12",
     hook: "Coordination multi-dev : AGENTS.md partagé, gates, eval engineer, onboarding, anti-patterns équipe.",
-  },
-  {
-    file: "13-rag-local-postgres.md",
-    number: "13",
-    hook: "Vectoriser la documentation métier dans Postgres local : quand ça marche, preuves, limites, architecture RAG hybride.",
   },
 ];
 

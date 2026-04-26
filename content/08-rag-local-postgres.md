@@ -1,4 +1,4 @@
-# Module 13 — RAG local sur PostgreSQL pour documentation metier (Avril 2026)
+# Module 08 — RAG local sur PostgreSQL pour documentation metier (Avril 2026)
 
 > Vectoriser la documentation metier dans un PostgreSQL local peut vraiment aider un LLM. Mais la partie qui marche n'est pas "mettre toute la doc en vecteurs". C'est un systeme de retrieval evalue, hybride, cite et maintenu.
 
