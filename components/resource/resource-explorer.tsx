@@ -22,12 +22,12 @@ type ResourceExplorerProps = {
 
 const sourceLabels = {
   primary: "source primaire",
-  independent: "recherche independante",
-  community: "communaute",
+  independent: "recherche indépendante",
+  community: "communauté",
 };
 
 const freshnessLabels = {
-  recent: "recent",
+  recent: "récent",
   durable: "durable",
   historical: "historique",
 };
@@ -100,7 +100,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
           <div className="border border-border bg-card p-3">
             <div className="flex items-center gap-2 px-2 pb-2 text-xs font-semibold uppercase tracking-wide text-muted-fg">
               <FunnelSimple size={14} />
-              Categories
+              Catégories
             </div>
             <button
               type="button"
@@ -143,7 +143,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                 <input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Chercher: context, Codex, Linear, evals, securite..."
+                  placeholder="Chercher: context, Codex, Linear, evals, sécurité..."
                   className="h-11 w-full border border-border bg-bg pl-10 pr-3 text-sm outline-none transition placeholder:text-muted-fg focus:border-accent"
                 />
               </label>
@@ -173,7 +173,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
               </span>
               <span className="inline-flex items-center gap-1 border border-border px-2 py-1">
                 <Sparkle size={13} />
-                Mis a jour avril 2026
+                Mis à jour avril 2026
               </span>
               {selectedAuthor !== "all" && (
                 <span className="inline-flex items-center gap-1 border border-border px-2 py-1">
@@ -186,7 +186,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
 
           {visibleResourceCount === 0 ? (
             <div className="mt-4 border border-border bg-card p-8 text-center">
-              <p className="text-sm font-medium">Aucune ressource ne correspond a cette recherche.</p>
+              <p className="text-sm font-medium">Aucune ressource ne correspond à cette recherche.</p>
               <button
                 type="button"
                 onClick={() => {
@@ -196,7 +196,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                 }}
                 className="mt-3 border border-border px-3 py-2 text-xs font-medium text-muted-fg transition hover:bg-muted hover:text-fg"
               >
-                Reinitialiser les filtres
+                Réinitialiser les filtres
               </button>
             </div>
           ) : (
@@ -262,7 +262,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                               {resource.articleSummary && (
                                 <div className="mt-4 border border-border bg-bg p-4">
                                   <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-fg">
-                                    Resume de l'article
+                                    Résumé de l'article
                                   </div>
                                   <p className="mt-2 whitespace-pre-line text-sm leading-7 text-fg/90">
                                     {resource.articleSummary}
@@ -279,7 +279,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                                 </div>
                                 <div className="bg-muted/50 p-3">
                                   <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-fg">
-                                    A lire quand
+                                    À lire quand
                                   </div>
                                   <p className="mt-1 text-sm leading-6">{resource.useWhen}</p>
                                 </div>
@@ -307,7 +307,7 @@ export function ResourceExplorer({ categories, dossiers }: ResourceExplorerProps
                         <aside className="border border-border bg-card p-4 xl:self-start">
                           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-fg">
                             <Books size={14} />
-                            Articles lies
+                            Articles liés
                           </div>
                           <div className="mt-3 space-y-2">
                             {relatedDossiers.map((dossier) => (

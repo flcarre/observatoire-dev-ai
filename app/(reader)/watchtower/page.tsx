@@ -11,7 +11,7 @@ import { createAppUseCases } from "@/core/infrastructure/container";
 export const metadata = {
   title: "Watchtower",
   description:
-    "Veille sourcee sur l'evolution du software engineering avec la GenAI.",
+    "Veille sourcée sur l'évolution du software engineering avec la GenAI.",
 };
 
 export default async function WatchtowerPage() {
@@ -26,14 +26,14 @@ export default async function WatchtowerPage() {
             <div>
               <div className="inline-flex items-center gap-2 border border-border bg-card px-3 py-1 text-xs text-muted-fg">
                 <Binoculars size={14} className="text-accent" />
-                Watchtower · veille sourcee · avril 2026
+                Watchtower · veille sourcée · avril 2026
               </div>
               <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight lg:text-5xl">
                 Watchtower DevIA
               </h1>
               <p className="mt-3 max-w-3xl text-base leading-7 text-muted-fg">
                 Le radar de ressources externes: articles, recherches, docs produit et retours
-                terrain tries pour des equipes senior qui veulent changer leur pratique, pas
+                terrain triés pour des équipes senior qui veulent changer leur pratique, pas
                 juste empiler des liens.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
@@ -57,7 +57,7 @@ export default async function WatchtowerPage() {
             <div className="grid grid-cols-2 gap-3">
               <Stat label="Ressources" value={stats.resourceCount.toString()} />
               <Stat label="Axes" value={stats.categoryCount.toString()} />
-              <Stat label="Recentes" value={stats.recentCount.toString()} />
+              <Stat label="Récentes" value={stats.recentCount.toString()} />
               <Stat label="Sources watch" value={stats.watchSourceCount.toString()} />
             </div>
           </div>
@@ -69,11 +69,11 @@ export default async function WatchtowerPage() {
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-wide text-muted-fg">
-                Sources importees
+                Sources importées
               </div>
               <p className="mt-1 text-sm leading-6 text-muted-fg">
-                Chaque watch source est lue comme une entree brute, puis reduite a une
-                selection courte, dedoublonnee et resumee en francais.
+                Chaque watch source est lue comme une entrée brute, puis réduite à une
+                sélection courte, dédoublonnée et résumée en français.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">

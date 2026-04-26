@@ -11,19 +11,19 @@ import { createAppUseCases } from "@/core/infrastructure/container";
 
 const contributionPrompt = `Tu contribues au repo open source Observatoire DevIA.
 
-Source a analyser:
+Source à analyser:
 <URL_ARTICLE_OU_REPO>
 
 Objectif:
-Ajoute uniquement les ressources a fort signal pour des developpeurs seniors qui veulent comprendre le travail logiciel avec la GenAI.
+Ajoute uniquement les ressources à fort signal pour des développeurs seniors qui veulent comprendre le travail logiciel avec la GenAI.
 
-Avant d'editer:
+Avant d'éditer:
 1. Lis AGENTS.md.
 2. Lis CONTRIBUTING.md.
 3. Lis specs/002-watch-source-ingestion/spec.md.
 4. Inspecte lib/resources.ts.
 
-Fichiers autorises pour une contribution article/veille:
+Fichiers autorisés pour une contribution article/veille:
 - lib/resources.ts
 - README.md seulement si la documentation publique change
 - CONTRIBUTING.md seulement si le prompt ou le workflow change
@@ -41,31 +41,31 @@ Fichiers interdits pour une contribution article/veille standard:
 - scripts/*
 - .github/workflows/*
 
-Regles:
+Règles:
 - N'importe pas tout.
-- Dedoublonne les URLs existantes.
-- Rejette les contenus debutants, framework-first ou purement marketing.
-- Ecris les syntheses finales en francais.
+- Dédoublonne les URLs existantes.
+- Rejette les contenus débutants, framework-first ou purement marketing.
+- Écris les synthèses finales en français.
 - Garde synthesis comme accroche courte, puis ajoute articleSummary pour expliquer l'article sans devoir l'ouvrir.
 - Ne copie pas de longs extraits.
-- Garde la source originale tracable.
+- Garde la source originale traçable.
 - Renseigne author comme auteur, entreprise, laboratoire, organisme ou influenceur tech canonique.
-- Normalise les variantes d'une meme organisation, par exemple GitHub Docs et GitHub Blog -> GitHub.
+- Normalise les variantes d'une même organisation, par exemple GitHub Docs et GitHub Blog -> GitHub.
 
-Implementation:
-1. Si la source est un repo/liste/README, ajoute ou mets a jour watchSources.
-2. Ajoute les ressources retenues dans les categories existantes.
-3. Cree une categorie seulement si elle est durable et framework-agnostic.
+Implémentation:
+1. Si la source est un repo/liste/README, ajoute ou mets à jour watchSources.
+2. Ajoute les ressources retenues dans les catégories existantes.
+3. Crée une catégorie seulement si elle est durable et framework-agnostic.
 4. Renseigne title, publisher, author, url, date, kind, sourceType, freshness, tags, synthesis, articleSummary, seniorTakeaway et useWhen.
 
 Validation:
 - npm run typecheck
 - npm run build
 - npm run check:contribution-scope
-  Cette commande emet un warning non bloquant si la PR de veille touche aussi des fichiers proteges.
+  Cette commande émet un warning non bloquant si la PR de veille touche aussi des fichiers protégés.
 
 PR:
-Ouvre une pull request avec la source analysee, les ressources retenues, les ressources rejetees, les categories modifiees, les validations lancees et les warnings eventuels a expliquer.`;
+Ouvre une pull request avec la source analysée, les ressources retenues, les ressources rejetées, les catégories modifiées, les validations lancées et les warnings éventuels à expliquer.`;
 
 export default async function HomePage() {
   const { getHomePage } = createAppUseCases();
@@ -84,9 +84,9 @@ export default async function HomePage() {
               Observatoire DevIA
             </h1>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-fg">
-              Une base open source de ressources pour comprendre comment le metier de
-              developpeur evolue avec les agents, le context engineering, la revue IA,
-              les workflows d'equipe et les outils utilises dans l'industrie.
+              Une base open source de ressources pour comprendre comment le métier de
+              développeur évolue avec les agents, le context engineering, la revue IA,
+              les workflows d'équipe et les outils utilisés dans l'industrie.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
@@ -108,9 +108,9 @@ export default async function HomePage() {
 
           <div className="grid grid-cols-2 gap-3 lg:self-end">
             <Stat label="Ressources" value={stats.resourceCount.toString()} />
-            <Stat label="Categories" value={stats.categoryCount.toString()} />
-            <Stat label="Recentes" value={stats.recentCount.toString()} />
-            <Stat label="Veilles importees" value={stats.watchSourceCount.toString()} />
+            <Stat label="Catégories" value={stats.categoryCount.toString()} />
+            <Stat label="Récentes" value={stats.recentCount.toString()} />
+            <Stat label="Veilles importées" value={stats.watchSourceCount.toString()} />
           </div>
         </div>
       </section>
@@ -120,11 +120,11 @@ export default async function HomePage() {
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-wide text-muted-fg">
-                Sources de veille importees
+                Sources de veille importées
               </div>
               <p className="mt-1 text-sm leading-6 text-muted-fg">
                 Le catalogue peut absorber un repo ou README de veille, puis garder une
-                selection categorisee et resumee pour developpeurs seniors.
+                sélection catégorisée et résumée pour développeurs seniors.
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -161,7 +161,7 @@ export default async function HomePage() {
               <h2 className="mt-2 text-3xl font-semibold tracking-tight">Approfondir un sujet</h2>
               <p className="mt-2 max-w-3xl text-sm leading-6 text-muted-fg">
                 Les anciens modules utiles restent disponibles comme articles longs. Ils
-                ne sont pas un parcours obligatoire: choisissez le sujet qui complete
+                ne sont pas un parcours obligatoire: choisissez le sujet qui complète
                 votre veille.
               </p>
             </div>
@@ -204,10 +204,10 @@ export default async function HomePage() {
               Ajouter une veille avec un agent
             </h2>
             <p className="mt-3 text-sm leading-6 text-muted-fg">
-              Le projet est pense pour recevoir des contributions preparees par
+              Le projet est pensé pour recevoir des contributions préparées par
               Codex, Claude Code, Cursor ou un autre agent. Donnez un lien
               d'article, de repo ou de watch list, laissez l'agent proposer une
-              selection, puis ouvrez une PR relue humainement.
+              sélection, puis ouvrez une PR relue humainement.
             </p>
             <div className="mt-5 space-y-2 text-sm leading-6 text-muted-fg">
               <p>
@@ -216,8 +216,8 @@ export default async function HomePage() {
                 et le template de PR dans <code className="text-fg">.github/pull_request_template.md</code>.
               </p>
               <p>
-                Le principe: peu de bruit, beaucoup de signal, sources tracables,
-                syntheses originales en francais, avec resumes lisibles pour les articles de veille.
+                Le principe: peu de bruit, beaucoup de signal, sources traçables,
+                synthèses originales en français, avec résumés lisibles pour les articles de veille.
               </p>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default async function HomePage() {
           <div className="min-w-0 border border-border bg-card">
             <div className="border-b border-border px-4 py-3">
               <div className="text-xs font-semibold uppercase tracking-wide text-muted-fg">
-                Prompt a donner au LLM
+                Prompt à donner au LLM
               </div>
             </div>
             <pre className="max-h-[520px] overflow-auto p-4 text-xs leading-6 text-fg">
@@ -237,7 +237,7 @@ export default async function HomePage() {
 
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-6 text-xs text-muted-fg sm:px-6 lg:px-8">
-          <span>Observatoire open source, contenu local, pas de compte, pas de tracking par defaut.</span>
+          <span>Observatoire open source, contenu local, pas de compte, pas de tracking par défaut.</span>
           <div className="flex flex-wrap gap-3">
             <a href="#contribuer" className="transition hover:text-fg">
               Contribuer
