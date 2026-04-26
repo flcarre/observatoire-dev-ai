@@ -75,14 +75,9 @@ timeline
 
 > *"La compétence rare en 2024 était de prompter. La compétence rare en 2026 est le system design pour agents."*
 
-Le reste de cette formation détaille comment construire ces compétences avec la pile Next.js + Vercel, qui est la plus aboutie pour la dev fullstack IA en avril 2026.
-
-## Visualisation
-
-La page [Diagrammes interactifs](/diagrammes) regroupe les schémas React Flow zoomables : stack Vercel complète, pattern multi-agents, pipeline RAG, leviers de coût, architecture du repo template.
+Le reste de l'observatoire détaille comment construire ces compétences sans dépendre d'une pile framework particulière.
 
 ## Prochains pas
 
-- **Si vous voulez le big picture infra** : passez à [01-nextjs-vercel-prod.md](./01-nextjs-vercel-prod.md).
 - **Si vous voulez l'angle workflow** : sautez à [03-workflow-agents-dev.md](./03-workflow-agents-dev.md).
 - **Si vous voulez le pitch coût** : [07-cout-securite-perf.md](./07-cout-securite-perf.md) ouvre les yeux sur la facture mensuelle.

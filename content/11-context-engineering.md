@@ -399,10 +399,6 @@ Différence : **mêmes capacités, ~7× moins de tokens, recall stable même à 
 7. **À 30+ tools, Tool Search Tool**. À 100+ skills, audit régulier.
 8. La compétence rare en 2026, c'est ça. Investissez le temps.
 
-## Visualisation
-
-Le diagramme [Cycle de vie du contexte](/diagrammes#context-lifecycle) montre comment le contexte est managé tout au long d'un agent run : initialisation → exécution → compaction → sub-agents → persistence externe.
-
 ## Sources
 
 - Anthropic — [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)

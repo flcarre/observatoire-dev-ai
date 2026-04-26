@@ -1,18 +1,13 @@
 import { Sidebar } from "@/components/sidebar";
-import { getAllModules } from "@/lib/modules";
+import { createAppUseCases } from "@/core/infrastructure/container";
 
 export default async function ReaderLayout({ children }: { children: React.ReactNode }) {
-  const modules = await getAllModules();
-  const navItems = modules.map((m) => ({
-    slug: m.slug,
-    number: m.number,
-    title: m.title,
-    hook: m.hook,
-  }));
+  const { getReaderShell } = createAppUseCases();
+  const { categoryItems, navItems, resourceItems } = await getReaderShell();
 
   return (
     <div className="flex min-h-screen">
-      <Sidebar modules={navItems} />
+      <Sidebar modules={navItems} categories={categoryItems} resources={resourceItems} />
       <main className="flex-1 min-w-0">{children}</main>
     </div>
   );

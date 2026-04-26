@@ -377,11 +377,7 @@ Cf. module 02 §8. Sans, un refresh de page = stream perdu. Avec Redis-backed re
 - Cache hit rate qui s'effondre → prefix change involontaire.
 - Coût par user p99 explosant → power user à investiguer.
 
-## 11. Visualiser le cumul des leviers
-
-Le diagramme [Stack des leviers de coût](/diagrammes#cost-stack) montre comment passer de 100 % du coût naïf à ~5–10 % en cumulant routing, prompt caching, batch et context engineering.
-
-## 12. Optimisations architecturales
+## 11. Optimisations architecturales
 
 | Pattern | Économie | Trade-off |
 |---|---|---|
@@ -421,5 +417,3 @@ Le diagramme [Stack des leviers de coût](/diagrammes#cost-stack) montre comment
 6. **Defense in depth** : input filter + trust boundaries + output filter + tool sandbox + rate limiting + PII handling.
 7. **Sécurité Server Actions** : Zod-validate les inputs, ré-auth à chaque action, jamais de fait sur middleware seul.
 8. **Cost dashboards** par tenant / model / feature ; alertes sur spike + cache miss.
-
-Module suivant : [08-jobs-realtime-voice.md](./08-jobs-realtime-voice.md) — au-delà du chat, comment construire des agents background, du voice, et du temps réel.

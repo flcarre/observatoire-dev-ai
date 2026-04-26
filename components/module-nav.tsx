@@ -13,7 +13,7 @@ export function ModuleNav({ prev, next }: { prev: Nav; next: Nav }) {
         >
           <span className="flex items-center gap-1 text-xs text-muted-fg">
             <ArrowLeft size={12} />
-            Précédent · Module {prev.number}
+            Précédent · Dossier {prev.number}
           </span>
           <span className="mt-1 font-medium leading-snug">{prev.title}</span>
         </Link>
@@ -27,7 +27,7 @@ export function ModuleNav({ prev, next }: { prev: Nav; next: Nav }) {
           className="group flex flex-col items-end rounded-lg border border-border bg-card p-4 text-right transition hover:border-accent/40 hover:bg-muted/50"
         >
           <span className="flex items-center gap-1 text-xs text-muted-fg">
-            Suivant · Module {next.number}
+            Suivant · Dossier {next.number}
             <ArrowRight size={12} />
           </span>
           <span className="mt-1 font-medium leading-snug">{next.title}</span>
