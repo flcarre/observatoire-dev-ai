@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 0 0% 100%;
+    --fg: 240 10% 4%;
+    --muted: 240 5% 96%;
+    --muted-fg: 240 4% 46%;
+    --border: 240 6% 90%;
+    --accent: 217 91% 60%;
+    --accent-fg: 0 0% 100%;
+    --card: 0 0% 100%;
+  }
+  .dark {
+    --bg: 240 10% 4%;
+    --fg: 0 0% 98%;
+    --muted: 240 4% 12%;
+    --muted-fg: 240 5% 65%;
+    --border: 240 4% 16%;
+    --accent: 217 91% 65%;
+    --accent-fg: 240 10% 4%;
+    --card: 240 6% 8%;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-bg text-fg antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+}
+
+@layer components {
+  .prose-content {
+    @apply prose prose-zinc dark:prose-invert max-w-none;
+    @apply prose-headings:scroll-mt-24 prose-headings:font-semibold prose-headings:tracking-tight;
+    @apply prose-h1:text-3xl prose-h1:mb-2 prose-h1:mt-0;
+    @apply prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-border;
+    @apply prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3;
+    @apply prose-h4:text-lg prose-h4:mt-6 prose-h4:mb-2;
+    @apply prose-p:leading-7 prose-p:text-fg/90;
+    @apply prose-a:text-accent prose-a:no-underline hover:prose-a:underline;
+    @apply prose-strong:text-fg prose-strong:font-semibold;
+    @apply prose-blockquote:border-l-4 prose-blockquote:border-accent prose-blockquote:bg-muted/40 prose-blockquote:pl-4 prose-blockquote:py-1 prose-blockquote:not-italic;
+    @apply prose-code:rounded prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:text-[0.875em] prose-code:font-medium prose-code:before:content-none prose-code:after:content-none;
+    @apply prose-pre:rounded-xl prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:p-0;
+    @apply prose-table:text-sm prose-table:border-collapse;
+    @apply prose-th:bg-muted/50 prose-th:p-3 prose-th:text-left prose-th:font-semibold;
+    @apply prose-td:p-3 prose-td:border-t prose-td:border-border;
+    @apply prose-li:my-1 prose-ul:my-4 prose-ol:my-4;
+    @apply prose-hr:my-12 prose-hr:border-border;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-1.5 h-1.5;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-border rounded;
+  }
+}
+
+[data-rehype-pretty-code-fragment] pre {
+  @apply overflow-x-auto py-4 leading-relaxed text-sm;
+}
+[data-rehype-pretty-code-fragment] code {
+  @apply grid;
+  counter-reset: line;
+  background: transparent !important;
+}
+[data-rehype-pretty-code-fragment] code > [data-line] {
+  @apply px-4 border-l-2 border-l-transparent;
+}
+[data-rehype-pretty-code-fragment] code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply inline-block w-6 mr-4 text-right text-muted-fg;
+}
+[data-rehype-pretty-code-fragment] [data-highlighted-line] {
+  @apply bg-accent/10 border-l-accent;
+}
+[data-rehype-pretty-code-fragment] [data-highlighted-chars] {
+  @apply rounded bg-accent/20 px-1;
+}
+[data-rehype-pretty-code-title] {
+  @apply px-4 py-2 text-xs font-mono text-muted-fg border-b border-border;
+}
+
+.mermaid-container svg {
+  @apply mx-auto max-w-full h-auto;
+}
+
+.react-flow__node {
+  font-size: 0.75rem !important;
+}
