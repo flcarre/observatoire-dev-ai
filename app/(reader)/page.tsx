@@ -83,8 +83,7 @@ export default async function HomePage() {
             <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-fg">
               Une base open source de ressources pour comprendre comment le metier de
               developpeur evolue avec les agents, le context engineering, la revue IA,
-              les workflows d'equipe et les outils comme Codex, Claude Code, Cursor,
-              Linear ou Sourcegraph.
+              les workflows d'equipe et les outils utilises dans l'industrie.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
