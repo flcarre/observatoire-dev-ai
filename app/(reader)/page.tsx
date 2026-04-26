@@ -3,11 +3,14 @@ import {
   ArrowRight,
   Clock,
   GitBranch,
+  GithubLogo,
   GlobeHemisphereWest,
   Rows,
 } from "@phosphor-icons/react/dist/ssr";
 import { ResourceExplorer } from "@/components/resource/resource-explorer";
 import { createAppUseCases } from "@/core/infrastructure/container";
+
+const repositoryUrl = "https://github.com/flcarre/devai";
 
 const contributionPrompt = `Tu contribues au repo open source Observatoire DevIA.
 
@@ -103,6 +106,15 @@ export default async function HomePage() {
                 Lire les articles de fond
                 <Rows size={15} />
               </Link>
+              <a
+                href={repositoryUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-border bg-card px-4 py-2 text-sm font-medium transition hover:bg-muted"
+              >
+                Voir le repo
+                <GithubLogo size={15} />
+              </a>
             </div>
           </div>
 
@@ -216,6 +228,18 @@ export default async function HomePage() {
                 et le template de PR dans <code className="text-fg">.github/pull_request_template.md</code>.
               </p>
               <p>
+                Le dépôt public est disponible sur{" "}
+                <a
+                  href={repositoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-fg underline decoration-border underline-offset-4 transition hover:text-accent"
+                >
+                  GitHub
+                </a>
+                .
+              </p>
+              <p>
                 Le principe: peu de bruit, beaucoup de signal, sources traçables,
                 synthèses originales en français, avec résumés lisibles pour les articles de veille.
               </p>
@@ -241,6 +265,14 @@ export default async function HomePage() {
           <div className="flex flex-wrap gap-3">
             <a href="#contribuer" className="transition hover:text-fg">
               Contribuer
+            </a>
+            <a
+              href={repositoryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-fg"
+            >
+              GitHub
             </a>
             <a
               href="https://github.com/github/spec-kit"
