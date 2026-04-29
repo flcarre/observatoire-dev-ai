@@ -94,6 +94,405 @@ export const resourceCategories: ResourceCategory[] = [
           "Pour repositionner le rôle senior dans une équipe où les frontières PM/design/dev bougent.",
       },
       {
+        title: "AI turns software engineers into product engineers",
+        publisher: "Atlassian Work Life",
+        author: "Atlassian",
+        url: "https://www.atlassian.com/blog/artificial-intelligence/how-ai-turns-software-engineers-into-product-engineers",
+        date: "2026-01-15",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "recent",
+        tags: ["product-engineering", "ai-era", "customer-context", "taste"],
+        synthesis:
+          "Atlassian décrit le passage du modèle PM-spécification-dev-exécution vers un rôle d'engineer qui participe au choix du problème, au contexte client et à la validation produit.",
+        articleSummary:
+          "L'article part du constat que les agents de code compressent le temps entre une intention et un prototype fonctionnel. Quand l'implémentation devient moins rare, le risque principal n'est plus seulement de savoir construire, mais de choisir quoi construire. Atlassian définit le product engineer comme la combinaison de l'excellence technique, du contexte client et de la résolution stratégique de problèmes. Le texte oppose le développeur ticket-taker, mesuré sur la livraison d'une spec, à l'engineer qui participe aux interviews, lit le feedback support, challenge la solution et mesure l'adoption. La partie la plus utile est la notion de goût produit: quand l'IA peut produire quelque chose qui compile et semble correct, quelqu'un doit juger si cela résout vraiment le problème utilisateur. L'article reste vendor-friendly, mais il cadre bien la mutation du rôle senior: plus de proximité avec les utilisateurs, plus de responsabilité sur les outcomes, moins d'exécution aveugle.",
+        seniorTakeaway:
+          "Avec les agents, le jugement produit devient un avantage technique: un senior doit savoir relier problème, solution, adoption et architecture.",
+        useWhen:
+          "Pour expliquer à une équipe pourquoi l'IA ne rend pas le rôle engineer moins important, mais le rapproche du cadrage produit.",
+      },
+      {
+        title: "The next big job in tech may be the 'product engineer'",
+        publisher: "Yahoo Tech / Business Insider",
+        author: "Lakshmi Varanasi",
+        url: "https://tech.yahoo.com/ai/claude/articles/next-big-job-tech-may-090901264.html/",
+        date: "2026-04-06",
+        kind: "report",
+        sourceType: "independent",
+        freshness: "recent",
+        tags: ["product-engineering", "pm-role", "anthropic", "ai-productivity"],
+        synthesis:
+          "Article de veille sur l'émergence du product engineer comme réponse organisationnelle à la hausse de productivité des engineers outillés par l'IA.",
+        articleSummary:
+          "L'article reprend un signal intéressant de l'écosystème: si les outils comme Claude Code rendent les engineers deux à trois fois plus productifs sur certains travaux, les PMs et designers se retrouvent à supporter un volume effectif de delivery beaucoup plus élevé. Une réponse possible n'est pas simplement d'embaucher plus de PMs, mais de donner à des engineers product-minded la responsabilité produit de petits chantiers. Le cas Anthropic cité dans l'article est concret: pour des projets de moins de deux semaines d'effort engineering, l'engineer peut agir comme mini-PM, aligner les stakeholders et assumer l'outcome. Le texte est court et journalistique, donc à lire comme un signal de marché plutôt qu'un modèle complet. Sa valeur pour l'observatoire est de montrer que le titre product engineer sort du vocabulaire startup pour devenir une option d'operating model discutée publiquement.",
+        seniorTakeaway:
+          "La productivité agentique déplace la pression vers la coordination produit; les petits chantiers peuvent exiger un ownership engineer plus complet.",
+        useWhen:
+          "Pour nourrir une discussion org design sur le ratio PM/engineering et les seuils de délégation produit.",
+      },
+      {
+        title: "Product meets Engineering in the AI Era",
+        publisher: "TechEmpower",
+        author: "Tony Karrer",
+        url: "https://www.techempower.com/blog/2026/03/13/product-meets-engineering-in-the-ai-era/",
+        date: "2026-03-13",
+        kind: "engineering",
+        sourceType: "independent",
+        freshness: "recent",
+        tags: ["product-engineering", "specs", "agentic-coding", "prd"],
+        synthesis:
+          "Analyse le nouveau frottement entre produit et engineering quand les specs sont lues littéralement par des agents de code.",
+        articleSummary:
+          "TechEmpower décrit un problème très concret des workflows agentiques: la spec a désormais deux publics, les humains et les agents. Une spec floue peut soit générer une longue liste de questions qui ralentit l'équipe, soit être exécutée trop vite dans la mauvaise direction. L'article recommande de donner aux PMs des outils codebase-aware pour clarifier l'état produit, les questions ouvertes et les edge cases avant le handoff. Il propose aussi de parler davantage de specs que de tickets ou PRDs, car l'artefact devient une entrée opérationnelle pour l'agent. La partie la plus utile pour les engineers est le rappel que la spec claire ne supprime pas l'engineering: architecture, contraintes, sécurité, découpage en tâches testables et revue restent des responsabilités humaines. Pour une équipe senior, c'est une ressource pratique sur l'interface PM-engineer-agent.",
+        seniorTakeaway:
+          "Le product engineer doit écrire et relire les specs comme des contrats exécutables: assez précises pour l'agent, assez contextualisées pour l'architecture.",
+        useWhen:
+          "Pour améliorer Definition of Ready, PRDs, tickets et specs dans une équipe qui délègue à des coding agents.",
+      },
+      {
+        title: "When Everyone Can Build: Redesigning Product Work for the AI Era in 2026",
+        publisher: "Adaline Labs",
+        author: "Nilesh Barla",
+        url: "https://labs.adaline.ai/p/redesigning-product-work-for-the-ai-era-in-2026",
+        date: "2026-01-31",
+        kind: "community",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "role-boundaries", "decision-rights", "coherence"],
+        synthesis:
+          "Propose de remplacer les frontières PM/designer/engineer par des droits de décision explicites quand l'IA permet à chacun de produire des artefacts.",
+        articleSummary:
+          "L'article décrit la collapse des frontières de rôle: les PMs peuvent produire des dashboards, les designers des prototypes plus proches du code, et les engineers des variantes de copy ou de scope. Le problème n'est pas que tout le monde puisse produire plus, mais que la cohérence produit se dégrade quand les décisions ne sont pas attribuées clairement. Adaline propose de raisonner en doer, decider et reviewer plutôt qu'en titres de poste. La lecture est utile pour le thème product engineer parce qu'elle évite un piège: le rôle hybride ne doit pas devenir une zone floue où chacun fait tout sans accountability. Le product engineer a besoin de droits de décision explicites, d'artefacts partagés et de règles de revue. Sinon l'IA augmente le throughput visible tout en dispersant le sens, le langage, les métriques et les patterns UX.",
+        seniorTakeaway:
+          "Un rôle hybride ne marche que si l'équipe rend visibles decision rights, reviewers et critères de cohérence.",
+        useWhen:
+          "Pour refondre la collaboration PM/design/engineering quand l'équipe prototype et shippe plus vite avec l'IA.",
+      },
+      {
+        title: "Why we're hiring AI Engineers",
+        publisher: "incident.io",
+        author: "Pete Hamilton",
+        url: "https://incident.io/blog/why-hire-ai-engineers",
+        date: "2025-04-03",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "durable",
+        tags: ["product-engineering", "ai-engineering", "evals", "agentic-products"],
+        synthesis:
+          "incident.io distingue product engineering, AI sprinkling et AI engineering pour expliquer le nouveau rôle qui transforme des modèles probabilistes en produit fiable.",
+        articleSummary:
+          "incident.io explique pourquoi l'entreprise, historiquement organisée autour de product engineers, ouvre un rôle AI Engineer pour ses produits agentiques. Le texte sépare trois niveaux: logiciel déterministe sans IA, fonctionnalité avec 'AI sprinkles', puis AI engineering où l'IA devient coeur de la valeur produit. À ce dernier niveau, les tests unitaires classiques ne suffisent plus: il faut evals, backtesting, orchestration, outils de debug, safety rails et benchmarks adaptés. L'article est précieux car il ne confond pas AI engineer avec chercheur fondation model. La cible est un builder produit capable de transformer des modèles existants en workflows réels, sûrs et utiles. Le lien avec product engineer est direct: les meilleurs profils combinent instincts produit, craft logiciel et capacité à opérer des systèmes probabilistes en production.",
+        seniorTakeaway:
+          "Le product engineer AI-native doit savoir construire le produit et le harness d'evaluation qui rend ce produit fiable.",
+        useWhen:
+          "Pour clarifier la différence entre product engineer, AI engineer applicatif et ML researcher dans une organisation produit.",
+      },
+      {
+        title: "Coinbase's bet on agent-first development",
+        publisher: "Linear Customers",
+        author: "Linear",
+        url: "https://linear.app/customers/coinbase",
+        date: "2026",
+        kind: "case-study",
+        sourceType: "primary",
+        freshness: "recent",
+        tags: ["product-engineering", "agent-first", "source-of-truth", "coinbase"],
+        synthesis:
+          "Cas Coinbase/Base sur une organisation qui repense le travail produit autour d'agents, d'un contexte structuré et d'une source de vérité exploitable.",
+        articleSummary:
+          "Linear raconte comment Chintan Turakhia a poussé l'organisation Base chez Coinbase vers un mode agent-first, jusqu'à demander aux engineers de travailler deux semaines sans IDE et sans écrire directement du code. Le point le plus intéressant n'est pas le geste spectaculaire, mais le diagnostic: les entreprises sont lentes parce que le contexte est dispersé entre têtes, Slack, meetings, tickets et notes. Les humains compensent ce désordre; les agents beaucoup moins. Coinbase traite donc Linear comme une source de vérité pour requirements, designs, bugs, statuts et structure d'équipe. Cela transforme le travail du product engineer: designer les systèmes de contexte pour agents, pas seulement écrire ou déléguer du code. Le cas est évidemment présenté par un fournisseur, mais il illustre très bien le glissement du rôle vers l'architecture de coordination.",
+        seniorTakeaway:
+          "Un product engineer agent-first doit structurer le contexte de travail autant que le code: sinon l'agent accélère surtout les malentendus.",
+        useWhen:
+          "Pour discuter source of truth, tickets, specs et workflows quand une organisation veut passer du copilote individuel à l'agent-first.",
+      },
+      {
+        title: "Professional Software Developers Don't Vibe, They Control",
+        publisher: "arXiv",
+        author: "Ruanqianqian Huang et al.",
+        url: "https://arxiv.org/abs/2512.14012",
+        date: "2025-12-16",
+        kind: "research",
+        sourceType: "independent",
+        freshness: "recent",
+        tags: ["product-engineering", "agency", "professional-practice", "agent-control"],
+        synthesis:
+          "Étude qualitative montrant que les développeurs expérimentés utilisent les agents comme boost, mais conservent le contrôle sur design, qualité et implémentation.",
+        articleSummary:
+          "Ce papier étudie l'usage réel des agents de code par des développeurs professionnels expérimentés, via observations de terrain et enquêtes qualitatives. Le résultat important est que ces praticiens ne se contentent pas de vibe coder. Ils apprécient le gain de productivité, mais gardent leur agency sur la conception logicielle, les choix d'implémentation et les attributs de qualité. Leur expertise sert à cadrer l'agent, choisir les tâches adaptées, limiter les dérives et vérifier les sorties. Pour le rôle de product engineer, le papier donne un contrepoids empirique aux narratifs trop simples: l'IA ne remplace pas le contrôle professionnel, elle le rend plus important. Les pratiques classiques restent utiles, notamment découpage, tests, lisibilité, validation et jugement sur la qualité. C'est une ressource solide pour expliquer que le product engineer AI-native n'est pas un prompt jockey, mais un opérateur responsable du système de production.",
+        seniorTakeaway:
+          "Les seniors efficaces ne délèguent pas leur jugement; ils utilisent leur expertise pour contrôler l'agent et choisir où il vaut la peine.",
+        useWhen:
+          "Pour cadrer les normes d'usage agent dans une équipe qui veut aller vite sans basculer dans le vibe coding non contrôlé.",
+      },
+      {
+        title: "Role and Identity Work of Software Engineering Professionals in the Generative AI Era",
+        publisher: "arXiv / CHASE 2026",
+        author: "Jorge Melegati",
+        url: "https://arxiv.org/abs/2602.18190",
+        date: "2026-02-20",
+        kind: "research",
+        sourceType: "independent",
+        freshness: "recent",
+        tags: ["product-engineering", "identity", "roles", "genai"],
+        synthesis:
+          "Article CHASE 2026 sur la manière dont l'adoption GenAI change l'identité professionnelle selon les rôles software engineering.",
+        articleSummary:
+          "Jorge Melegati propose une agenda de recherche sur le role and identity work des professionnels du software engineering à l'ère GenAI. Le papier part d'une idée utile pour les leads: l'adoption de GenAI ne change pas seulement les outils techniques, elle change la manière dont les personnes se définissent au travail. L'auteur insiste sur le fait que les rôles ne réagissent pas tous pareil: développeurs, testeurs, managers ou profils hybrides n'ont pas les mêmes tensions identitaires. Pour l'observatoire, cette ressource aide à ne pas traiter le product engineer comme un simple titre nouveau. C'est aussi un travail d'identité: quelles tâches sont encore 'du vrai engineering', quelles responsabilités passent au produit, comment préserver expertise, autonomie et reconnaissance. Le papier n'apporte pas de playbook opérationnel, mais il donne un cadre sérieux pour discuter adoption IA sans réduire le sujet à productivité.",
+        seniorTakeaway:
+          "Changer les rôles avec l'IA crée aussi un travail d'identité; ignorer cette dimension ralentit l'adoption ou produit du cynisme.",
+        useWhen:
+          "Pour préparer une transformation d'équipe qui touche aux responsabilités, titres, progression et attentes de rôle.",
+      },
+      {
+        title: "From Junior to Senior: Allocating Agency and Navigating Professional Growth in Agentic AI-Mediated Software Engineering",
+        publisher: "arXiv / CHI 2026",
+        author: "Dana Feng, Bhada Yun, April Yi Wang",
+        url: "https://arxiv.org/abs/2602.00496",
+        date: "2026-02-11",
+        kind: "research",
+        sourceType: "independent",
+        freshness: "recent",
+        tags: ["product-engineering", "agency", "mentorship", "career"],
+        synthesis:
+          "Étude CHI 2026 sur la différence junior/senior dans l'allocation d'agency avec les agents de code.",
+        articleSummary:
+          "Ce papier compare comment juniors et seniors utilisent les agents dans le travail logiciel et la progression professionnelle. Les auteurs observent que l'agency est souvent contrainte par les politiques organisationnelles, pas seulement par les préférences individuelles. Les seniors gardent le contrôle par une délégation détaillée, tandis que les novices oscillent davantage entre sur-dépendance et évitement prudent. La lecture est importante pour le rôle product engineer parce qu'elle montre que le profil hybride exige des instincts construits avant l'IA: cadrage, suspicion productive, décomposition et mentorship. Si l'équipe pousse trop vite les juniors vers une posture 'mini-PM + agents', elle risque de court-circuiter l'apprentissage du jugement. Pour les leaders, l'article aide à définir des pratiques qui préservent agency, apprentissage et mentoring dans un environnement où les agents deviennent plus autonomes.",
+        seniorTakeaway:
+          "Le rôle product engineer exige agency et jugement; il faut donc enseigner la délégation aux agents, pas seulement l'usage des outils.",
+        useWhen:
+          "Pour adapter onboarding, mentoring et attentes de niveau dans une équipe qui utilise des coding agents au quotidien.",
+      },
+      {
+        title: "The Product-Minded Software Engineer",
+        publisher: "The Pragmatic Engineer",
+        author: "Gergely Orosz",
+        url: "https://blog.pragmaticengineer.com/the-product-minded-engineer/",
+        date: "2019",
+        kind: "community",
+        sourceType: "community",
+        freshness: "historical",
+        tags: ["product-engineering", "product-minded", "durable-concept", "career"],
+        synthesis:
+          "Référence durable qui formalise les traits du product-minded engineer bien avant la vague actuelle d'agents.",
+        articleSummary:
+          "Cet article est antérieur à la vague GenAI, mais il reste une base conceptuelle importante. Gergely Orosz décrit les engineers product-minded comme des développeurs qui veulent comprendre pourquoi une décision produit est prise, comment les utilisateurs se comportent et comment mesurer l'impact. Les traits listés restent très actuels: proposer des idées, s'intéresser au business, demander pourquoi, communiquer avec les non-engineers, créer des boucles de validation rapides et suivre les métriques après rollout. L'intérêt aujourd'hui est de rappeler que le product engineer n'est pas né avec Claude Code ou Cursor. L'IA rend cette posture plus visible et plus nécessaire, mais les compétences de fond sont anciennes: curiosité, ownership, contexte utilisateur et capacité à relier craft technique et outcome. À lire comme fondation historique, pas comme guide d'outillage 2026.",
+        seniorTakeaway:
+          "L'IA accélère une posture qui existait déjà: les meilleurs engineers ne se contentaient pas d'exécuter des specs.",
+        useWhen:
+          "Pour donner une base durable à un leveling ou à une discussion carrière autour du product-minded engineering.",
+      },
+      {
+        title: "The Product-Minded Engineer",
+        publisher: "O'Reilly",
+        author: "Drew Hoskins",
+        url: "https://www.oreilly.com/library/view/the-product-minded-engineer/9781098173722/",
+        date: "2025-11",
+        kind: "docs",
+        sourceType: "independent",
+        freshness: "recent",
+        tags: ["product-engineering", "book", "product-thinking", "career"],
+        synthesis:
+          "Livre O'Reilly récent sur les méthodes qui relient excellence engineering et insight produit.",
+        articleSummary:
+          "La page O'Reilly présente le livre de Drew Hoskins comme un guide pour combler l'écart entre compétence engineering et insight produit. L'ouvrage s'adresse à un public intermediate to advanced et structure le product thinking autour de scénarios, discovery, priorisation, execution et validation. Même si la page n'est pas un article complet, elle constitue une référence utile parce que le livre date de novembre 2025, au moment où le vocabulaire product-minded engineer redevient central avec l'IA. Le sommaire met l'accent sur les scénarios comme outil pour capturer interviews, frictions, gaps produit et critères de validation. Pour une équipe senior, cela donne une piste concrète: renforcer la capacité à raconter, tester et prioriser des scénarios utilisateur, pas seulement à générer du code. C'est une ressource de fond pour professionnaliser le rôle.",
+        seniorTakeaway:
+          "Le product engineering demande des techniques de discovery et de validation, pas seulement une attitude générale orientée utilisateur.",
+        useWhen:
+          "Pour construire une bibliothèque ou un parcours interne de montée en compétence product-minded pour engineers seniors.",
+      },
+      {
+        title: "Product Engineering: The Only Skill That Survives AI",
+        publisher: "Sourav Dey",
+        author: "Sourav Dey",
+        url: "https://souravdey.space/blogs/product-engineers-and-the-ai-era",
+        date: "2026-03-30",
+        kind: "community",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "ai-era", "problem-framing", "career"],
+        synthesis:
+          "Retour de praticien sur le déplacement de valeur: quand tout le monde peut produire vite, la rareté devient la capacité à choisir le bon problème.",
+        articleSummary:
+          "Sourav Dey raconte comment sept ans de construction de produits customer-facing l'ont amené à voir le product thinking comme la compétence la plus résistante à l'IA. L'article est moins académique que les autres, mais il met le doigt sur une tension très réelle: l'IA enlève une partie de la friction qui obligeait autrefois à se demander si une feature valait vraiment l'effort. Quand un prototype arrive en vingt minutes, le mauvais problème peut recevoir une solution beaucoup trop vite. L'auteur illustre cela avec un exemple HackerRank: le vrai problème n'était pas un formulaire imparfait, mais l'incapacité des recruteurs à savoir quelles questions techniques choisir. La leçon est simple et utile: les engineers à impact commencent par 'qui a ce problème, comment le résout-il aujourd'hui, comment saura-t-on que c'est mieux?'.",
+        seniorTakeaway:
+          "Plus l'exécution devient facile, plus la discovery et le cadrage deviennent des compétences différenciantes.",
+        useWhen:
+          "Pour aider des engineers à passer d'une identité de code writer à une identité de problem owner.",
+      },
+      {
+        title: "What I'm building as an AI Product Engineer in 2026",
+        publisher: "PEC Community",
+        author: "Boaz",
+        url: "https://productengineer.info/community/articles/en/ai-product-engineer-2026-goals",
+        date: "2026-03-04",
+        kind: "community",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "ai-product-engineer", "skills", "workflow-abstraction"],
+        synthesis:
+          "Témoignage de builder sur le passage de l'écriture de code à la conception de structures et workflows que les agents exécutent.",
+        articleSummary:
+          "L'article décrit le vécu d'un AI Product Engineer après plusieurs mois de développement intensif avec agents. Son idée centrale est que le rôle se déplace de 'personne qui écrit le code' vers 'personne qui conçoit la structure à partir de laquelle le code sera généré'. Le texte insiste sur l'apprentissage par volume: construire beaucoup de features, apps et systèmes pour voir apparaître les patterns à abstraire. Les skills Claude Code, custom agents et workflows répétables sont présentés comme des abstractions de tâches découvertes par usage répété, pas comme des gadgets. La partie la plus utile est le lien entre gain d'implémentation et retour vers la discovery: observer, empathiser, découvrir, définir, puis abstraire. La ressource est communautaire et subjective, mais elle donne un vocabulaire concret au nouveau rôle: designer les boucles de travail que les agents peuvent exécuter.",
+        seniorTakeaway:
+          "Le product engineer agentique ne délègue pas seulement du code; il identifie les patterns de travail répétables et les transforme en workflows.",
+        useWhen:
+          "Pour réfléchir à skills, custom agents et abstractions internes autour de projets produit répétables.",
+      },
+      {
+        title: "Become a Product Engineer - Introducing Season 7",
+        publisher: "Chats with Kent",
+        author: "Kent C. Dodds",
+        url: "https://kentcdodds.com/chats/07/00/become-a-product-engineer-introducing-season-7",
+        date: "2026-04-01",
+        kind: "community",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "kent-c-dodds", "ai-era", "durable-skills"],
+        synthesis:
+          "Kent C. Dodds lance une saison entière sur le product engineering comme compétence durable quand l'IA prend davantage d'implementation.",
+        articleSummary:
+          "Cet épisode d'introduction est utile parce qu'il formule clairement la thèse de Kent: les agents vont continuer à prendre une part croissante de l'exécution, mais la capacité à comprendre les utilisateurs, clarifier les problèmes et choisir quoi construire reste difficile à automatiser. Il ne dit pas que le craft technique disparait; il rappelle que qualité, revue et pratiques d'ingénierie restent nécessaires. Mais il déplace le centre de gravité vers les compétences que les bons PMs ont historiquement développées: empathie utilisateur, problem clarity, goût produit et capacité à tomber amoureux du problème plutôt que de la solution. La saison est présentée comme un parcours de conversations avec des profils qui mélangent jugement produit et profondeur technique. Pour l'observatoire, c'est un signal culturel fort: un éducateur historiquement associé au craft front-end repositionne son enseignement autour du product engineering.",
+        seniorTakeaway:
+          "Quand la vitesse d'implementation augmente, le senior doit devenir meilleur à décider ce qui vaut la peine d'être construit.",
+        useWhen:
+          "Pour introduire le sujet product engineer à une équipe de développeurs qui voit l'IA surtout comme un accélérateur de code.",
+      },
+      {
+        title: "The right thing before the thing right",
+        publisher: "Chats with Kent",
+        author: "Kent C. Dodds",
+        url: "https://kentcdodds.com/chats/07/02/the-right-thing-before-the-thing-right-product-engineering-with-wayne-allan",
+        date: "2026-04-01",
+        kind: "community",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "discovery", "feedback-loops", "wayne-allan"],
+        synthesis:
+          "Conversation avec Wayne Allan sur le product engineering en pratique: parler aux utilisateurs, valider tôt et construire la bonne chose avant de l'optimiser.",
+        articleSummary:
+          "Kent et Wayne Allan décrivent le product engineering comme un déplacement de posture: l'engineer ne se contente pas de bien construire une solution, il participe à la question plus risquée de savoir si cette solution mérite d'exister. L'épisode couvre des pratiques très concrètes: validation scrappy, échanges avec sales et support, The Mom Test, Crossing the Chasm, Kano model et feedback loops courtes. Le point fort est la phrase directrice: building the thing right est en aval de building the right thing. Wayne explique aussi comment les meilleures équipes prennent de bonnes décisions produit même quand le PM n'est pas là, parce qu'elles comprennent les critères et le problème client. Pour une équipe senior, l'épisode fournit un vocabulaire simple pour éviter les PRs techniquement propres mais produit-inutiles.",
+        seniorTakeaway:
+          "Le product engineer doit réduire le risque de mauvais problème aussi sérieusement qu'il réduit le risque technique.",
+        useWhen:
+          "Pour former des engineers à discovery légère, feedback client et arbitrage avant implémentation.",
+      },
+      {
+        title: "Foundations, feedback, and agents",
+        publisher: "Chats with Kent",
+        author: "Kent C. Dodds",
+        url: "https://kentcdodds.com/chats/07/03/foundations-feedback-and-agents-dillon-mulroy-on-product-at-cloudflare",
+        date: "2026-04-01",
+        kind: "case-study",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "cloudflare", "agents", "support-feedback"],
+        synthesis:
+          "Conversation avec Dillon Mulroy de Cloudflare sur feedback client, support, observabilité et discipline produit quand les agents accélèrent le code.",
+        articleSummary:
+          "Cet épisode relie product engineering et travail agentique à partir d'un terrain Cloudflare. Dillon Mulroy insiste sur l'observation des utilisateurs, la boucle avec support, les escalations client, les métriques et l'observabilité comme pratiques produit, pas seulement comme pratiques opérationnelles. La conversation est intéressante parce qu'elle garde les pieds sur terre: quand les agents rendent possible de produire de gros diffs très vite, l'équipe doit être encore plus disciplinée sur les fondations, le scope et les signaux de feedback. L'épisode décrit aussi les relations cross-fonctionnelles avec support, sales et finance comme partie du jugement engineering. Pour l'observatoire, c'est une bonne pièce de transition entre rôle product engineer, agents et operating model.",
+        seniorTakeaway:
+          "Les agents augmentent le besoin de fondations produit: feedback réel, métriques, support et scope serré avant grands diffs.",
+        useWhen:
+          "Pour discuter comment une équipe plateforme ou produit doit rester proche des utilisateurs tout en augmentant la vitesse agentique.",
+      },
+      {
+        title: "Become an Epic Product Engineer",
+        publisher: "Epic Product Engineer",
+        author: "Kent C. Dodds",
+        url: "https://www.epicproduct.engineer/",
+        date: "rolling",
+        kind: "product",
+        sourceType: "primary",
+        freshness: "recent",
+        tags: ["product-engineering", "kent-c-dodds", "course", "product-sense"],
+        synthesis:
+          "Page de programme de Kent C. Dodds qui positionne explicitement le product sense comme compétence durable quand l'IA écrit plus de code.",
+        articleSummary:
+          "La page Epic Product Engineer est courte, mais elle cristallise le repositionnement de Kent: l'IA écrit de plus en plus de code, donc la compétence qui tient est de savoir quoi construire. Le message reprend plusieurs thèmes devenus centraux dans les équipes senior: comprendre les utilisateurs avant d'ouvrir l'éditeur, raccourcir les boucles de feedback, prendre des décisions produit crédibles et shipper la bonne chose avant de la perfectionner. Comme il s'agit d'une page de programme, elle doit être lue comme un signal de marché et d'éducation, pas comme une recherche indépendante. Son intérêt est justement là: un acteur très connu de l'écosystème dev transforme son offre pédagogique autour du product engineer, ce qui montre que le terme n'est plus seulement un titre startup ou une annonce de job.",
+        seniorTakeaway:
+          "Le marché de la formation dev suit le même déplacement: moins de pure syntaxe, plus de problem framing et product sense.",
+        useWhen:
+          "Pour suivre comment les références de l'éducation développeur repositionnent les compétences senior à l'ère IA.",
+      },
+      {
+        title: "Product Engineer - Accounting Domain",
+        publisher: "Qonto Careers",
+        author: "Qonto",
+        url: "https://jobs.lever.co/qonto/5e9f184e-0785-41d3-9a41-28b4dc317c87",
+        date: "rolling",
+        kind: "docs",
+        sourceType: "primary",
+        freshness: "recent",
+        tags: ["product-engineering", "qonto", "ai-native", "ownership"],
+        synthesis:
+          "Annonce Qonto qui rend le rôle product engineer très concret: ownership end-to-end, challenge des specs, AI tooling et collaboration PM/design.",
+        articleSummary:
+          "Cette annonce de poste est une source primaire utile parce qu'elle montre comment une scale-up française formalise le rôle dans son organisation. Qonto décrit le product engineer comme quelqu'un qui shippe des features de bout en bout avec PMs et designers, utilise Cursor, Claude Code, Copilot et l'automatisation, mais surtout challenge le produit plutôt que d'exécuter simplement une demande. Le texte insiste sur le product mindset: comprendre la valeur business du code, naviguer une logique métier complexe comme la comptabilité, questionner les specs et construire le meilleur produit plutôt que seulement celui demandé. L'annonce ajoute aussi la dimension operating model: autonomie par défaut, décisions owned par la squad, communication avec stakeholders non techniques. Ce n'est pas un article de fond, mais c'est un signal très concret de marché.",
+        seniorTakeaway:
+          "Le titre product engineer devient une attente opérationnelle: ownership, specs challengées, domaine métier et usage natif des agents.",
+        useWhen:
+          "Pour comparer le discours théorique sur le product engineer avec une fiche de poste actuelle dans une scale-up européenne.",
+      },
+      {
+        title: "What makes great product managers: the case for learning",
+        publisher: "The Qonto Way",
+        author: "Qonto",
+        url: "https://medium.com/qonto-way/product-development-series-part-i-what-makes-great-product-managers-the-case-for-learning-1e98005cc0e8",
+        date: "2020-06-08",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "historical",
+        tags: ["product-engineering", "qonto", "chief-engineer", "learning-organization"],
+        synthesis:
+          "Texte historique Qonto sur le Chief Engineer, le produit comme responsabilité complète et l'apprentissage comme compétence centrale d'une organisation produit.",
+        articleSummary:
+          "Cet article est ancien, mais il apporte une racine intéressante au débat actuel. Qonto y décrit les limites d'une product management réduit à la coordination de features, puis introduit la figure du Chief Engineer comme responsable du produit dans son ensemble. Ce rôle est présenté comme une sorte de CEO du produit: comprendre les clients, les produits concurrents, les dimensions marketing, sales, operations, engineering et les décisions qui créent vraiment de la valeur. Même si le vocabulaire diffère du product engineer actuel, la logique est très proche: casser les silos, mettre le learning au centre et donner à un profil produit-tech la responsabilité de faire émerger une bonne solution, pas seulement une roadmap. À lire comme contexte historique durable sur l'ADN product engineering chez Qonto.",
+        seniorTakeaway:
+          "Le product engineer moderne reprend une intuition plus ancienne: la qualité du produit vient d'un apprentissage transverse, pas d'un handoff PM vers dev.",
+        useWhen:
+          "Pour donner du fond organisationnel à une discussion sur les rôles hybrides produit/engineering.",
+      },
+      {
+        title: "Value analysis: starting development later to deliver sooner",
+        publisher: "The Qonto Way",
+        author: "Qonto",
+        url: "https://medium.com/qonto-way/product-development-series-part-ii-value-analysis-starting-development-later-to-deliver-sooner-4636f761eadc",
+        date: "2020-06-09",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "historical",
+        tags: ["product-engineering", "qonto", "value-analysis", "front-loading"],
+        synthesis:
+          "Qonto défend le front-loading: apprendre et cadrer plus tôt pour commencer à développer plus tard, mais livrer mieux et plus vite.",
+        articleSummary:
+          "La seconde partie de la série Qonto est directement utile pour le rôle product engineer, même avant l'IA. Elle soutient que le plus gros gaspillage est de construire des fonctionnalités que les clients ne veulent pas vraiment acheter, adopter ou utiliser. La réponse proposée est de front-loader le design process: observer les usages, lire les verbatims clients, analyser les données, étudier les concurrents, comprendre les préférences et formaliser un concept produit avant d'investir en développement. L'article nomme aussi la boucle Value Analysis / Value Engineering: d'abord apprendre ce qui crée ou détruit de la valeur, puis traduire cet apprentissage en conception et construction. Avec les agents, cette logique devient encore plus importante: si le code arrive vite, le mauvais cadrage coûte encore plus vite.",
+        seniorTakeaway:
+          "Commencer à coder plus tard peut faire livrer plus tôt si cela évite une mauvaise direction accélérée par les agents.",
+        useWhen:
+          "Pour convaincre une équipe IA-native de garder une étape de cadrage produit sérieuse avant de lancer plusieurs agents.",
+      },
+      {
+        title: "Value engineering: designing products that sell",
+        publisher: "The Qonto Way",
+        author: "Qonto",
+        url: "https://medium.com/qonto-way/product-development-series-part-iii-value-engineering-designing-products-that-sell-79318635af37",
+        date: "2020-06-10",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "historical",
+        tags: ["product-engineering", "qonto", "value-engineering", "customer-preferences"],
+        synthesis:
+          "Qonto détaille comment traduire préférences client, contraintes techniques et différenciation produit dans une solution qui vend.",
+        articleSummary:
+          "La troisième partie passe de l'analyse à l'engineering du produit. Qonto y explique que répondre aux besoins fonctionnels ne suffit pas: un bon produit doit aussi inspirer confiance, réduire la maintenance côté utilisateur, créer un attachement et donner le sentiment d'un bon rapport valeur/prix. Le framework 80 points + alpha est intéressant pour les seniors: atteindre un niveau suffisant sur les caractéristiques attendues, puis choisir consciemment les extras qui créent le 'je ne sais quoi' sans gaspiller l'effort. L'article montre comment relier préférences client et choix techniques, par exemple dans la présentation d'informations bancaires. Pour le product engineer, c'est un rappel utile: la technique doit traduire une compréhension fine de la valeur perçue, pas seulement satisfaire une checklist fonctionnelle.",
+        seniorTakeaway:
+          "Le product engineer doit arbitrer entre coeur fonctionnel, différenciation et coût d'implémentation, pas seulement livrer une spec complète.",
+        useWhen:
+          "Pour travailler les arbitrages de qualité perçue, delight et coût dans un produit métier complexe.",
+      },
+      {
         title: "AI Codebase Maturity Model",
         publisher: "arXiv",
         author: "arXiv",
