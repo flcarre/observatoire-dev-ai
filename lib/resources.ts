@@ -341,6 +341,158 @@ export const resourceCategories: ResourceCategory[] = [
           "Pour réfléchir à skills, custom agents et abstractions internes autour de projets produit répétables.",
       },
       {
+        title: "Become a Product Engineer - Introducing Season 7",
+        publisher: "Chats with Kent",
+        author: "Kent C. Dodds",
+        url: "https://kentcdodds.com/chats/07/00/become-a-product-engineer-introducing-season-7",
+        date: "2026-04-01",
+        kind: "community",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "kent-c-dodds", "ai-era", "durable-skills"],
+        synthesis:
+          "Kent C. Dodds lance une saison entière sur le product engineering comme compétence durable quand l'IA prend davantage d'implementation.",
+        articleSummary:
+          "Cet épisode d'introduction est utile parce qu'il formule clairement la thèse de Kent: les agents vont continuer à prendre une part croissante de l'exécution, mais la capacité à comprendre les utilisateurs, clarifier les problèmes et choisir quoi construire reste difficile à automatiser. Il ne dit pas que le craft technique disparait; il rappelle que qualité, revue et pratiques d'ingénierie restent nécessaires. Mais il déplace le centre de gravité vers les compétences que les bons PMs ont historiquement développées: empathie utilisateur, problem clarity, goût produit et capacité à tomber amoureux du problème plutôt que de la solution. La saison est présentée comme un parcours de conversations avec des profils qui mélangent jugement produit et profondeur technique. Pour l'observatoire, c'est un signal culturel fort: un éducateur historiquement associé au craft front-end repositionne son enseignement autour du product engineering.",
+        seniorTakeaway:
+          "Quand la vitesse d'implementation augmente, le senior doit devenir meilleur à décider ce qui vaut la peine d'être construit.",
+        useWhen:
+          "Pour introduire le sujet product engineer à une équipe de développeurs qui voit l'IA surtout comme un accélérateur de code.",
+      },
+      {
+        title: "The right thing before the thing right",
+        publisher: "Chats with Kent",
+        author: "Kent C. Dodds",
+        url: "https://kentcdodds.com/chats/07/02/the-right-thing-before-the-thing-right-product-engineering-with-wayne-allan",
+        date: "2026-04-01",
+        kind: "community",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "discovery", "feedback-loops", "wayne-allan"],
+        synthesis:
+          "Conversation avec Wayne Allan sur le product engineering en pratique: parler aux utilisateurs, valider tôt et construire la bonne chose avant de l'optimiser.",
+        articleSummary:
+          "Kent et Wayne Allan décrivent le product engineering comme un déplacement de posture: l'engineer ne se contente pas de bien construire une solution, il participe à la question plus risquée de savoir si cette solution mérite d'exister. L'épisode couvre des pratiques très concrètes: validation scrappy, échanges avec sales et support, The Mom Test, Crossing the Chasm, Kano model et feedback loops courtes. Le point fort est la phrase directrice: building the thing right est en aval de building the right thing. Wayne explique aussi comment les meilleures équipes prennent de bonnes décisions produit même quand le PM n'est pas là, parce qu'elles comprennent les critères et le problème client. Pour une équipe senior, l'épisode fournit un vocabulaire simple pour éviter les PRs techniquement propres mais produit-inutiles.",
+        seniorTakeaway:
+          "Le product engineer doit réduire le risque de mauvais problème aussi sérieusement qu'il réduit le risque technique.",
+        useWhen:
+          "Pour former des engineers à discovery légère, feedback client et arbitrage avant implémentation.",
+      },
+      {
+        title: "Foundations, feedback, and agents",
+        publisher: "Chats with Kent",
+        author: "Kent C. Dodds",
+        url: "https://kentcdodds.com/chats/07/03/foundations-feedback-and-agents-dillon-mulroy-on-product-at-cloudflare",
+        date: "2026-04-01",
+        kind: "case-study",
+        sourceType: "community",
+        freshness: "recent",
+        tags: ["product-engineering", "cloudflare", "agents", "support-feedback"],
+        synthesis:
+          "Conversation avec Dillon Mulroy de Cloudflare sur feedback client, support, observabilité et discipline produit quand les agents accélèrent le code.",
+        articleSummary:
+          "Cet épisode relie product engineering et travail agentique à partir d'un terrain Cloudflare. Dillon Mulroy insiste sur l'observation des utilisateurs, la boucle avec support, les escalations client, les métriques et l'observabilité comme pratiques produit, pas seulement comme pratiques opérationnelles. La conversation est intéressante parce qu'elle garde les pieds sur terre: quand les agents rendent possible de produire de gros diffs très vite, l'équipe doit être encore plus disciplinée sur les fondations, le scope et les signaux de feedback. L'épisode décrit aussi les relations cross-fonctionnelles avec support, sales et finance comme partie du jugement engineering. Pour l'observatoire, c'est une bonne pièce de transition entre rôle product engineer, agents et operating model.",
+        seniorTakeaway:
+          "Les agents augmentent le besoin de fondations produit: feedback réel, métriques, support et scope serré avant grands diffs.",
+        useWhen:
+          "Pour discuter comment une équipe plateforme ou produit doit rester proche des utilisateurs tout en augmentant la vitesse agentique.",
+      },
+      {
+        title: "Become an Epic Product Engineer",
+        publisher: "Epic Product Engineer",
+        author: "Kent C. Dodds",
+        url: "https://www.epicproduct.engineer/",
+        date: "rolling",
+        kind: "product",
+        sourceType: "primary",
+        freshness: "recent",
+        tags: ["product-engineering", "kent-c-dodds", "course", "product-sense"],
+        synthesis:
+          "Page de programme de Kent C. Dodds qui positionne explicitement le product sense comme compétence durable quand l'IA écrit plus de code.",
+        articleSummary:
+          "La page Epic Product Engineer est courte, mais elle cristallise le repositionnement de Kent: l'IA écrit de plus en plus de code, donc la compétence qui tient est de savoir quoi construire. Le message reprend plusieurs thèmes devenus centraux dans les équipes senior: comprendre les utilisateurs avant d'ouvrir l'éditeur, raccourcir les boucles de feedback, prendre des décisions produit crédibles et shipper la bonne chose avant de la perfectionner. Comme il s'agit d'une page de programme, elle doit être lue comme un signal de marché et d'éducation, pas comme une recherche indépendante. Son intérêt est justement là: un acteur très connu de l'écosystème dev transforme son offre pédagogique autour du product engineer, ce qui montre que le terme n'est plus seulement un titre startup ou une annonce de job.",
+        seniorTakeaway:
+          "Le marché de la formation dev suit le même déplacement: moins de pure syntaxe, plus de problem framing et product sense.",
+        useWhen:
+          "Pour suivre comment les références de l'éducation développeur repositionnent les compétences senior à l'ère IA.",
+      },
+      {
+        title: "Product Engineer - Accounting Domain",
+        publisher: "Qonto Careers",
+        author: "Qonto",
+        url: "https://jobs.lever.co/qonto/5e9f184e-0785-41d3-9a41-28b4dc317c87",
+        date: "rolling",
+        kind: "docs",
+        sourceType: "primary",
+        freshness: "recent",
+        tags: ["product-engineering", "qonto", "ai-native", "ownership"],
+        synthesis:
+          "Annonce Qonto qui rend le rôle product engineer très concret: ownership end-to-end, challenge des specs, AI tooling et collaboration PM/design.",
+        articleSummary:
+          "Cette annonce de poste est une source primaire utile parce qu'elle montre comment une scale-up française formalise le rôle dans son organisation. Qonto décrit le product engineer comme quelqu'un qui shippe des features de bout en bout avec PMs et designers, utilise Cursor, Claude Code, Copilot et l'automatisation, mais surtout challenge le produit plutôt que d'exécuter simplement une demande. Le texte insiste sur le product mindset: comprendre la valeur business du code, naviguer une logique métier complexe comme la comptabilité, questionner les specs et construire le meilleur produit plutôt que seulement celui demandé. L'annonce ajoute aussi la dimension operating model: autonomie par défaut, décisions owned par la squad, communication avec stakeholders non techniques. Ce n'est pas un article de fond, mais c'est un signal très concret de marché.",
+        seniorTakeaway:
+          "Le titre product engineer devient une attente opérationnelle: ownership, specs challengées, domaine métier et usage natif des agents.",
+        useWhen:
+          "Pour comparer le discours théorique sur le product engineer avec une fiche de poste actuelle dans une scale-up européenne.",
+      },
+      {
+        title: "What makes great product managers: the case for learning",
+        publisher: "The Qonto Way",
+        author: "Qonto",
+        url: "https://medium.com/qonto-way/product-development-series-part-i-what-makes-great-product-managers-the-case-for-learning-1e98005cc0e8",
+        date: "2020-06-08",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "historical",
+        tags: ["product-engineering", "qonto", "chief-engineer", "learning-organization"],
+        synthesis:
+          "Texte historique Qonto sur le Chief Engineer, le produit comme responsabilité complète et l'apprentissage comme compétence centrale d'une organisation produit.",
+        articleSummary:
+          "Cet article est ancien, mais il apporte une racine intéressante au débat actuel. Qonto y décrit les limites d'une product management réduit à la coordination de features, puis introduit la figure du Chief Engineer comme responsable du produit dans son ensemble. Ce rôle est présenté comme une sorte de CEO du produit: comprendre les clients, les produits concurrents, les dimensions marketing, sales, operations, engineering et les décisions qui créent vraiment de la valeur. Même si le vocabulaire diffère du product engineer actuel, la logique est très proche: casser les silos, mettre le learning au centre et donner à un profil produit-tech la responsabilité de faire émerger une bonne solution, pas seulement une roadmap. À lire comme contexte historique durable sur l'ADN product engineering chez Qonto.",
+        seniorTakeaway:
+          "Le product engineer moderne reprend une intuition plus ancienne: la qualité du produit vient d'un apprentissage transverse, pas d'un handoff PM vers dev.",
+        useWhen:
+          "Pour donner du fond organisationnel à une discussion sur les rôles hybrides produit/engineering.",
+      },
+      {
+        title: "Value analysis: starting development later to deliver sooner",
+        publisher: "The Qonto Way",
+        author: "Qonto",
+        url: "https://medium.com/qonto-way/product-development-series-part-ii-value-analysis-starting-development-later-to-deliver-sooner-4636f761eadc",
+        date: "2020-06-09",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "historical",
+        tags: ["product-engineering", "qonto", "value-analysis", "front-loading"],
+        synthesis:
+          "Qonto défend le front-loading: apprendre et cadrer plus tôt pour commencer à développer plus tard, mais livrer mieux et plus vite.",
+        articleSummary:
+          "La seconde partie de la série Qonto est directement utile pour le rôle product engineer, même avant l'IA. Elle soutient que le plus gros gaspillage est de construire des fonctionnalités que les clients ne veulent pas vraiment acheter, adopter ou utiliser. La réponse proposée est de front-loader le design process: observer les usages, lire les verbatims clients, analyser les données, étudier les concurrents, comprendre les préférences et formaliser un concept produit avant d'investir en développement. L'article nomme aussi la boucle Value Analysis / Value Engineering: d'abord apprendre ce qui crée ou détruit de la valeur, puis traduire cet apprentissage en conception et construction. Avec les agents, cette logique devient encore plus importante: si le code arrive vite, le mauvais cadrage coûte encore plus vite.",
+        seniorTakeaway:
+          "Commencer à coder plus tard peut faire livrer plus tôt si cela évite une mauvaise direction accélérée par les agents.",
+        useWhen:
+          "Pour convaincre une équipe IA-native de garder une étape de cadrage produit sérieuse avant de lancer plusieurs agents.",
+      },
+      {
+        title: "Value engineering: designing products that sell",
+        publisher: "The Qonto Way",
+        author: "Qonto",
+        url: "https://medium.com/qonto-way/product-development-series-part-iii-value-engineering-designing-products-that-sell-79318635af37",
+        date: "2020-06-10",
+        kind: "engineering",
+        sourceType: "primary",
+        freshness: "historical",
+        tags: ["product-engineering", "qonto", "value-engineering", "customer-preferences"],
+        synthesis:
+          "Qonto détaille comment traduire préférences client, contraintes techniques et différenciation produit dans une solution qui vend.",
+        articleSummary:
+          "La troisième partie passe de l'analyse à l'engineering du produit. Qonto y explique que répondre aux besoins fonctionnels ne suffit pas: un bon produit doit aussi inspirer confiance, réduire la maintenance côté utilisateur, créer un attachement et donner le sentiment d'un bon rapport valeur/prix. Le framework 80 points + alpha est intéressant pour les seniors: atteindre un niveau suffisant sur les caractéristiques attendues, puis choisir consciemment les extras qui créent le 'je ne sais quoi' sans gaspiller l'effort. L'article montre comment relier préférences client et choix techniques, par exemple dans la présentation d'informations bancaires. Pour le product engineer, c'est un rappel utile: la technique doit traduire une compréhension fine de la valeur perçue, pas seulement satisfaire une checklist fonctionnelle.",
+        seniorTakeaway:
+          "Le product engineer doit arbitrer entre coeur fonctionnel, différenciation et coût d'implémentation, pas seulement livrer une spec complète.",
+        useWhen:
+          "Pour travailler les arbitrages de qualité perçue, delight et coût dans un produit métier complexe.",
+      },
+      {
         title: "AI Codebase Maturity Model",
         publisher: "arXiv",
         author: "arXiv",
